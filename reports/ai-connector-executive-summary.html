@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AI Connector Channel Performance — Executive Summary</title>
+<style>
+  :root {
+    --ink: #1a1a2e;
+    --muted: #555;
+    --accent: #2563eb;
+    --accent-light: #dbeafe;
+    --red: #dc2626;
+    --green: #16a34a;
+    --border: #e2e8f0;
+    --bg: #ffffff;
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    font-family: "Segoe UI", system-ui, -apple-system, sans-serif;
+    color: var(--ink);
+    background: var(--bg);
+    line-height: 1.55;
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 40px 32px 60px;
+  }
+  h1 {
+    font-size: 1.65rem;
+    font-weight: 700;
+    border-bottom: 3px solid var(--accent);
+    padding-bottom: 8px;
+    margin-bottom: 4px;
+  }
+  .subtitle {
+    color: var(--muted);
+    font-size: 0.92rem;
+    margin-bottom: 28px;
+  }
+  h2 {
+    font-size: 1.1rem;
+    font-weight: 700;
+    margin: 26px 0 10px;
+    color: var(--accent);
+  }
+  p, li { font-size: 0.9rem; margin-bottom: 8px; }
+  ul { padding-left: 20px; margin-bottom: 12px; }
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 0.82rem;
+    margin: 10px 0 18px;
+  }
+  th, td {
+    border: 1px solid var(--border);
+    padding: 6px 10px;
+    text-align: left;
+  }
+  th {
+    background: #f8fafc;
+    font-weight: 600;
+    white-space: nowrap;
+  }
+  td.num { text-align: right; font-variant-numeric: tabular-nums; }
+  .winner { background: #f0fdf4; font-weight: 600; }
+  .loser { background: #fef2f2; }
+  .tag {
+    display: inline-block;
+    font-size: 0.72rem;
+    font-weight: 600;
+    padding: 2px 7px;
+    border-radius: 3px;
+    vertical-align: middle;
+  }
+  .tag-green { background: #dcfce7; color: #166534; }
+  .tag-red { background: #fee2e2; color: #991b1b; }
+  .tag-amber { background: #fef9c3; color: #854d0e; }
+  .callout {
+    background: #eff6ff;
+    border-left: 4px solid var(--accent);
+    padding: 12px 16px;
+    margin: 16px 0;
+    font-size: 0.88rem;
+  }
+  .callout-red {
+    background: #fef2f2;
+    border-left-color: var(--red);
+  }
+  .footer {
+    margin-top: 32px;
+    padding-top: 12px;
+    border-top: 1px solid var(--border);
+    font-size: 0.78rem;
+    color: var(--muted);
+  }
+  strong { font-weight: 600; }
+  @media print {
+    body { padding: 20px; font-size: 0.85rem; }
+    h1 { font-size: 1.4rem; }
+    h2 { font-size: 1rem; break-after: avoid; }
+    table { font-size: 0.78rem; break-inside: avoid; }
+  }
+</style>
+</head>
+<body>
+
+<h1>AI Connector Channel Performance: Executive Summary</h1>
+<p class="subtitle">Mailchimp vs QuickBooks &amp; ChatGPT vs Claude &nbsp;|&nbsp; April 11, 2026</p>
+
+<!-- ───── SCALE ───── -->
+<h2>Scale &amp; Growth Velocity</h2>
+
+<table>
+  <thead>
+    <tr><th></th><th>QBO ChatGPT</th><th>QBO Claude</th><th>MC ChatGPT</th><th>MC Claude</th></tr>
+  </thead>
+  <tbody>
+    <tr><td><strong>Total connections</strong></td><td class="num">4,792</td><td class="num">4,830</td><td class="num">2,899</td><td class="num">2,693</td></tr>
+    <tr><td><strong>Days since launch</strong></td><td class="num">~130</td><td class="num">13</td><td class="num">130</td><td class="num">10</td></tr>
+    <tr><td><strong>Daily adds (current)</strong></td><td class="num">~60 (steady)</td><td class="num">280–440</td><td class="num loser">~15 (declining)</td><td class="num">~269</td></tr>
+  </tbody>
+</table>
+
+<p>Mailchimp is at roughly <strong>half of QBO's scale</strong> on both channels. Claude is the growth story on both platforms — QBO's Claude overtook ChatGPT in 13 days; Mailchimp's Claude will overtake ChatGPT within days at current rates. The critical difference: QBO's ChatGPT holds steady at ~60/day while <strong>Mailchimp's ChatGPT has decayed 67%</strong> from its Jan peak of 45/day to just 15/day. Claude's daily velocity is comparable across platforms (~269 MC vs 280–440 QBO).</p>
+
+<!-- ───── COMPOSITION ───── -->
+<h2>User Composition: Existing Accounts, Not New Customers</h2>
+
+<p>Over <strong>90% of both ChatGPT and Claude connections on Mailchimp are existing accounts</strong>. Of the connected user base, Claude skews more toward paid plans (<strong>63.4% paid</strong>) than ChatGPT (<strong>52.6% paid</strong>) — both far above any other Mailchimp integration channel (Shopify: 10%, Canva: 18%). These are power users adding AI tools to active accounts, not new customers discovering Mailchimp.</p>
+
+<!-- ───── ENGAGEMENT ───── -->
+<h2>Engagement: Mailchimp's Advantage Over QBO — Claude Leads ChatGPT</h2>
+
+<table>
+  <thead>
+    <tr><th></th><th>QBO ChatGPT</th><th>QBO Claude</th><th>MC ChatGPT</th><th>MC Claude</th></tr>
+  </thead>
+  <tbody>
+    <tr><td><strong>AI feature engagement (eligible)</strong></td><td class="num">53%</td><td class="num">49%</td><td class="num winner">63%</td><td class="num winner">82%</td></tr>
+    <tr><td><strong>Premium / Advanced tier</strong></td><td class="num">73%</td><td class="num">68%</td><td class="num winner">88%</td><td class="num winner">96%</td></tr>
+  </tbody>
+</table>
+
+<p>Mailchimp outperforms QBO on engagement across every tier. Within Mailchimp, <strong>Claude users are dramatically more active than ChatGPT</strong>: 82% weekly active vs 63%, with Premium Claude at a near-perfect 96%. Part of this reflects Claude's recency (10 days vs 130), but ChatGPT's 63% at maturity still exceeds QBO's best number (53%). Even ChatGPT's free-tier users show 23% WAU, while Claude's free tier hits 61%.</p>
+
+<!-- ───── PRODUCT ATTACHMENT ───── -->
+<h2>Product Attachment: Automations Strong, Secondary Products Lag</h2>
+
+<table>
+  <thead>
+    <tr><th>MC Product</th><th>MC ChatGPT</th><th>MC Claude</th><th>MC Platform Avg</th><th>AI Multiplier</th><th>QBO Equivalent</th></tr>
+  </thead>
+  <tbody>
+    <tr><td><strong>Automations</strong></td><td class="num winner">40%</td><td class="num winner">46%</td><td class="num">23%</td><td class="num">1.8–2.0×</td><td>Payments: 29% / 27% (5.3×)</td></tr>
+    <tr><td><strong>SMS</strong></td><td class="num winner">8%</td><td class="num winner">5%</td><td class="num">1.9%</td><td class="num">2.6–4.2×</td><td>Payroll: 19% / 17% (3.1×)</td></tr>
+    <tr><td><strong>Transactional Email</strong></td><td class="num">1.5%</td><td class="num">2.0%</td><td class="num">2.1%</td><td class="num">~1×</td><td>BillPay: 18% / 16% (8.6×)</td></tr>
+    <tr><td><strong>WhatsApp</strong></td><td class="num">0%</td><td class="num">0%</td><td class="num">~0%</td><td class="num">N/A</td><td>—</td></tr>
+  </tbody>
+</table>
+
+<p>Automations is Mailchimp's standout — <strong>46% for Claude</strong> and <strong>40% for ChatGPT</strong>, nearly double the platform average and exceeding QBO's top metric (Payments at 29%). Claude leads ChatGPT by 5.5 pts. However, QBO's <strong>multi-product multiplier is 3–8×</strong> vs Mailchimp's <strong>1.8–4.2×</strong>. QBO's depth across secondary products (Payroll 19%, BillPay 18%) far exceeds Mailchimp's SMS at 5–8%. ChatGPT edges Claude on SMS (8% vs 5%), likely because its older user base has had more time to expand into paid add-ons.</p>
+
+<!-- ───── ACQUISITION ───── -->
+<h2>New Customer Acquisition <span class="tag tag-red">Critical Failure</span></h2>
+
+<table>
+  <thead>
+    <tr><th>Channel</th><th>New MC Signups</th><th>Paid Conversion</th><th>Best Traditional</th><th>Worst Traditional</th></tr>
+  </thead>
+  <tbody>
+    <tr><td><strong>ChatGPT</strong></td><td class="num">278 (130 days)</td><td class="num loser">0%</td><td class="num">Shopify: 20.7%</td><td class="num">BeatStars: 10.5%</td></tr>
+    <tr><td><strong>Claude</strong></td><td class="num">103 (10 days)</td><td class="num loser">1.9% (2 users)</td><td class="num">Shopify: 20.7%</td><td class="num">BeatStars: 10.5%</td></tr>
+  </tbody>
+</table>
+
+<p>All 278 ChatGPT-sourced signups remain on free plans after 130 days — <strong>not one has converted to paid</strong>. Claude has 2 free-trial starts out of 103. Even the weakest traditional channel converts at 7–10%. The AI connectors are <strong>the lowest-performing acquisition channels in Mailchimp's entire portfolio</strong>. QBO did not report this metric separately, but their strong attachment numbers suggest their AI-sourced users monetize; Mailchimp's do not.</p>
+
+<!-- ───── SCORECARD ───── -->
+<h2>Scorecard</h2>
+
+<table>
+  <thead>
+    <tr><th>Dimension</th><th>QBO vs MC</th><th>ChatGPT vs Claude (within MC)</th></tr>
+  </thead>
+  <tbody>
+    <tr><td><strong>Scale</strong></td><td><span class="tag tag-red">QBO leads ~2×</span></td><td>ChatGPT leads (2,899 vs 2,693) but Claude will pass imminently</td></tr>
+    <tr><td><strong>Growth velocity</strong></td><td><span class="tag tag-red">QBO leads</span></td><td><span class="tag tag-green">Claude dominates</span> (269/day vs 15/day)</td></tr>
+    <tr><td><strong>Engagement</strong></td><td><span class="tag tag-green">MC leads</span> (+10–33 pts)</td><td><span class="tag tag-green">Claude leads</span> (82% vs 63% WAU)</td></tr>
+    <tr><td><strong>Top product attachment</strong></td><td><span class="tag tag-green">MC leads</span> (Automations 40–46%)</td><td><span class="tag tag-green">Claude leads</span> (46% vs 40%)</td></tr>
+    <tr><td><strong>Multi-product depth</strong></td><td><span class="tag tag-red">QBO leads</span> (3–8× vs 1.8–4.2×)</td><td><span class="tag tag-amber">ChatGPT slightly</span> (8% vs 5% SMS)</td></tr>
+    <tr><td><strong>New customer conversion</strong></td><td><span class="tag tag-red">QBO leads</span> (MC at 0–1.9%)</td><td><span class="tag tag-red">Neither works</span> (0% vs 1.9%)</td></tr>
+  </tbody>
+</table>
+
+<!-- ───── STRATEGIC IMPLICATION ───── -->
+<h2>Strategic Implication</h2>
+
+<div class="callout">
+  The AI connectors deliver <strong>strong engagement and Automations adoption among existing paid users</strong> — a genuine competitive advantage over QBO. But they are <strong>failing completely as acquisition channels</strong>: zero meaningful paid conversion from new signups, which even the weakest traditional channel achieves at 7–10%.
+</div>
+
+<p>Claude is the stronger channel on every forward-looking metric (velocity, engagement, Automations attachment), while ChatGPT is declining and should be monitored for intervention. The key decision: <strong>invest in fixing the free-to-paid funnel for AI-sourced signups</strong>, or formally reposition these channels as retention/engagement tools and measure them accordingly.</p>
+
+<div class="footer">
+  <p>Data source: <code>mc-business-intelligence</code> BigQuery &nbsp;|&nbsp; Tables: <code>bi_reporting.integrations</code>, <code>bi_reporting.orders</code>, <code>bi_reporting.users</code>, <code>bi_reporting.users_weekly_rollup</code>, <code>bi_reporting_beta.monthly_genai_user_eligibility</code>, <code>bi_reporting.sms_daily_rollup</code>, <code>bi_reporting.emails_customer_journey</code>, <code>bi_reporting.daily_transactional_sends</code>, <code>bi_reporting.messaging_outreach_daily_rollup</code></p>
+  <p>Generated April 11, 2026 &nbsp;|&nbsp; QBO benchmark data provided by QuickBooks product team</p>
+</div>
+
+</body>
+</html>
