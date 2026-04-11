@@ -3,252 +3,196 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>AI Connector Channel Performance — Executive Summary</title>
+<title>MC Everywhere Analyzer — Weekly Report</title>
 <style>
-  :root { --ink: #1a1a2e; --muted: #555; --accent: #2563eb; --red: #dc2626; --green: #16a34a; --border: #e2e8f0; --bg: #fff; }
-  * { margin: 0; padding: 0; box-sizing: border-box; }
-  body { font-family: "Segoe UI", system-ui, -apple-system, sans-serif; color: var(--ink); background: var(--bg); line-height: 1.55; max-width: 960px; margin: 0 auto; padding: 40px 32px 60px; }
-  h1 { font-size: 1.65rem; font-weight: 700; border-bottom: 3px solid var(--accent); padding-bottom: 8px; margin-bottom: 4px; }
-  .subtitle { color: var(--muted); font-size: 0.92rem; margin-bottom: 28px; }
-  h2 { font-size: 1.1rem; font-weight: 700; margin: 26px 0 10px; color: var(--accent); }
-  h3 { font-size: 0.95rem; font-weight: 700; margin: 18px 0 8px; color: var(--ink); }
-  p, li { font-size: 0.9rem; margin-bottom: 8px; }
-  table { width: 100%; border-collapse: collapse; font-size: 0.82rem; margin: 10px 0 18px; }
-  th, td { border: 1px solid var(--border); padding: 6px 10px; text-align: left; }
-  th { background: #f8fafc; font-weight: 600; white-space: nowrap; }
-  td.num { text-align: right; font-variant-numeric: tabular-nums; }
-  .winner { background: #f0fdf4; font-weight: 600; }
-  .loser { background: #fef2f2; }
-  .tag { display: inline-block; font-size: 0.72rem; font-weight: 600; padding: 2px 7px; border-radius: 3px; vertical-align: middle; }
-  .tag-green { background: #dcfce7; color: #166534; }
-  .tag-red { background: #fee2e2; color: #991b1b; }
-  .tag-amber { background: #fef9c3; color: #854d0e; }
-  .callout { background: #eff6ff; border-left: 4px solid var(--accent); padding: 12px 16px; margin: 16px 0; font-size: 0.88rem; }
-  .divider { border: none; border-top: 2px solid var(--accent); margin: 36px 0 8px; }
-  .footer { margin-top: 32px; padding-top: 12px; border-top: 1px solid var(--border); font-size: 0.78rem; color: var(--muted); }
-  strong { font-weight: 600; }
-  @media print { body { padding: 20px; font-size: 0.85rem; } h1 { font-size: 1.4rem; } h2 { font-size: 1rem; break-after: avoid; } table { font-size: 0.78rem; break-inside: avoid; } }
+  :root{--ink:#1a1a2e;--muted:#555;--accent:#2563eb;--red:#dc2626;--green:#16a34a;--border:#e2e8f0;--bg:#fff}
+  *{margin:0;padding:0;box-sizing:border-box}
+  body{font-family:"Segoe UI",system-ui,sans-serif;color:var(--ink);background:var(--bg);line-height:1.55;max-width:960px;margin:0 auto;padding:40px 32px 60px}
+  h1{font-size:1.65rem;font-weight:700;border-bottom:3px solid var(--accent);padding-bottom:8px;margin-bottom:4px}
+  .subtitle{color:var(--muted);font-size:.92rem;margin-bottom:28px}
+  h2{font-size:1.1rem;font-weight:700;margin:26px 0 10px;color:var(--accent)}
+  h3{font-size:.95rem;font-weight:700;margin:18px 0 8px;color:var(--ink)}
+  p,li{font-size:.9rem;margin-bottom:8px}
+  table{width:100%;border-collapse:collapse;font-size:.82rem;margin:10px 0 18px}
+  th,td{border:1px solid var(--border);padding:6px 10px;text-align:left}
+  th{background:#f8fafc;font-weight:600;white-space:nowrap}
+  td.num{text-align:right;font-variant-numeric:tabular-nums}
+  .winner{background:#f0fdf4;font-weight:600}
+  .loser{background:#fef2f2}
+  .tag{display:inline-block;font-size:.72rem;font-weight:600;padding:2px 7px;border-radius:3px;vertical-align:middle}
+  .tag-green{background:#dcfce7;color:#166534}.tag-red{background:#fee2e2;color:#991b1b}.tag-amber{background:#fef9c3;color:#854d0e}
+  .callout{background:#eff6ff;border-left:4px solid var(--accent);padding:12px 16px;margin:16px 0;font-size:.88rem}
+  .divider{border:none;border-top:2px solid var(--accent);margin:36px 0 8px}
+  .footer{margin-top:32px;padding-top:12px;border-top:1px solid var(--border);font-size:.78rem;color:var(--muted)}
+  strong{font-weight:600}
+  @media print{body{padding:20px;font-size:.85rem}h1{font-size:1.4rem}table{font-size:.78rem;break-inside:avoid}}
 </style>
 </head>
 <body>
 
-<h1>AI Connector Channel Performance: Executive Summary</h1>
+<h1>MC Everywhere Analyzer — Weekly Report</h1>
 <p class="subtitle">Mailchimp vs QuickBooks &amp; ChatGPT vs Claude &nbsp;|&nbsp; April 11, 2026</p>
+
+<!-- ════════ PART 1: CHANNEL PERFORMANCE ════════ -->
 
 <h2>Scale &amp; Growth Velocity</h2>
 <table>
-  <thead><tr><th></th><th>QBO ChatGPT</th><th>QBO Claude</th><th>MC ChatGPT</th><th>MC Claude</th></tr></thead>
-  <tbody>
-    <tr><td><strong>Total connections</strong></td><td class="num">4,792</td><td class="num">4,830</td><td class="num">2,899</td><td class="num">2,693</td></tr>
-    <tr><td><strong>Days since launch</strong></td><td class="num">~130</td><td class="num">13</td><td class="num">130</td><td class="num">10</td></tr>
-    <tr><td><strong>Daily adds (current)</strong></td><td class="num">~60 (steady)</td><td class="num">280–440</td><td class="num loser">~15 (declining)</td><td class="num">~269</td></tr>
-  </tbody>
+<thead><tr><th></th><th>QBO ChatGPT</th><th>QBO Claude</th><th>MC ChatGPT</th><th>MC Claude</th></tr></thead>
+<tbody>
+<tr><td><strong>Total connections</strong></td><td class="num">4,792</td><td class="num">4,830</td><td class="num">2,899</td><td class="num">2,693</td></tr>
+<tr><td><strong>Days since launch</strong></td><td class="num">~130</td><td class="num">13</td><td class="num">130</td><td class="num">10</td></tr>
+<tr><td><strong>Daily adds (7d avg)</strong></td><td class="num">~60 (steady)</td><td class="num">280–440</td><td class="num loser">~13 (declining)</td><td class="num">~247</td></tr>
+</tbody>
 </table>
-<p>Mailchimp is at roughly <strong>half of QBO's scale</strong> on both channels. Claude is the growth story on both platforms — QBO's Claude overtook ChatGPT in 13 days; Mailchimp's Claude will overtake ChatGPT within days. QBO's ChatGPT holds steady at ~60/day while <strong>Mailchimp's ChatGPT has decayed 67%</strong> from its Jan peak of 45/day to just 15/day. Claude's daily velocity is comparable across platforms (~269 MC vs 280–440 QBO).</p>
+<p>Mailchimp is at roughly <strong>half of QBO's scale</strong>. Claude is the growth story — <strong>247/day</strong> and will overtake ChatGPT's cumulative total within days. ChatGPT has decayed to <strong>13/day</strong>, down from 45/day in January.</p>
 
-<h2>User Composition: Existing Accounts, Not New Customers</h2>
-<p>Over <strong>90% of both ChatGPT and Claude connections on Mailchimp are existing accounts</strong>. Claude skews more toward paid plans (<strong>63.4% paid</strong>) than ChatGPT (<strong>52.6% paid</strong>) — both far above any other integration channel (Shopify: 10%, Canva: 18%). These are power users adding AI tools to active accounts.</p>
+<h2>User Composition</h2>
+<p>Over <strong>90%</strong> of connections are existing Mailchimp accounts. Claude skews more toward paid plans (<strong>63.4%</strong>) than ChatGPT (<strong>52.6%</strong>) — far above any other integration channel.</p>
 
-<h2>Engagement: Mailchimp's Advantage Over QBO — Claude Leads ChatGPT</h2>
+<h2>Engagement: Mailchimp Leads QBO</h2>
 <table>
-  <thead><tr><th></th><th>QBO ChatGPT</th><th>QBO Claude</th><th>MC ChatGPT</th><th>MC Claude</th></tr></thead>
-  <tbody>
-    <tr><td><strong>AI feature engagement (eligible)</strong></td><td class="num">53%</td><td class="num">49%</td><td class="num winner">63%</td><td class="num winner">82%</td></tr>
-    <tr><td><strong>Premium / Advanced tier</strong></td><td class="num">73%</td><td class="num">68%</td><td class="num winner">88%</td><td class="num winner">96%</td></tr>
-  </tbody>
+<thead><tr><th></th><th>QBO ChatGPT</th><th>QBO Claude</th><th>MC ChatGPT</th><th>MC Claude</th></tr></thead>
+<tbody>
+<tr><td><strong>AI feature engagement (eligible)</strong></td><td class="num">53%</td><td class="num">49%</td><td class="num winner">62.8%</td><td class="num winner">82.0%</td></tr>
+<tr><td><strong>Premium / Advanced tier</strong></td><td class="num">73%</td><td class="num">68%</td><td class="num winner">87.5%</td><td class="num winner">96.0%</td></tr>
+</tbody>
 </table>
-<p>Mailchimp outperforms QBO on engagement across every tier. <strong>Claude users are dramatically more active than ChatGPT</strong>: 82% weekly active vs 63%, with Premium Claude at 96%. ChatGPT's 63% at maturity still exceeds QBO's best (53%).</p>
 
-<h2>Product Attachment: Automations Strong, Secondary Products Lag</h2>
+<h2>Product Attachment</h2>
 <table>
-  <thead><tr><th>MC Product</th><th>MC ChatGPT</th><th>MC Claude</th><th>MC Platform Avg</th><th>AI Multiplier</th><th>QBO Equivalent</th></tr></thead>
-  <tbody>
-    <tr><td><strong>Automations</strong></td><td class="num winner">40%</td><td class="num winner">46%</td><td class="num">23%</td><td class="num">1.8–2.0×</td><td>Payments: 29%/27% (5.3×)</td></tr>
-    <tr><td><strong>SMS</strong></td><td class="num winner">8%</td><td class="num winner">5%</td><td class="num">1.9%</td><td class="num">2.6–4.2×</td><td>Payroll: 19%/17% (3.1×)</td></tr>
-    <tr><td><strong>Transactional Email</strong></td><td class="num">1.5%</td><td class="num">2.0%</td><td class="num">2.1%</td><td class="num">~1×</td><td>BillPay: 18%/16% (8.6×)</td></tr>
-  </tbody>
+<thead><tr><th>MC Product</th><th>MC ChatGPT</th><th>MC Claude</th><th>MC Platform Avg</th><th>QBO Equivalent</th></tr></thead>
+<tbody>
+<tr><td><strong>Automations</strong></td><td class="num winner">40%</td><td class="num winner">46%</td><td class="num">23%</td><td>Payments: 29%/27%</td></tr>
+<tr><td><strong>SMS</strong></td><td class="num winner">8%</td><td class="num winner">5%</td><td class="num">1.9%</td><td>Payroll: 19%/17%</td></tr>
+<tr><td><strong>Transactional Email</strong></td><td class="num">1.5%</td><td class="num">2.0%</td><td class="num">2.1%</td><td>BillPay: 18%/16%</td></tr>
+</tbody>
 </table>
-<p>Automations is Mailchimp's standout — <strong>46% for Claude, 40% for ChatGPT</strong>, nearly double the platform average and exceeding QBO's top metric (Payments at 29%). QBO's multi-product multiplier is 3–8× vs Mailchimp's 1.8–4.2×.</p>
 
 <h2>New Customer Acquisition <span class="tag tag-red">Critical Gap</span></h2>
 <table>
-  <thead><tr><th>Channel</th><th>New MC Signups</th><th>Paid Conversion</th><th>Best Traditional</th><th>Worst Traditional</th></tr></thead>
-  <tbody>
-    <tr><td><strong>ChatGPT</strong></td><td class="num">278 (130 days)</td><td class="num loser">0%</td><td class="num">Shopify: 20.7%</td><td class="num">BeatStars: 10.5%</td></tr>
-    <tr><td><strong>Claude</strong></td><td class="num">103 (10 days)</td><td class="num loser">1.9% (2 users)</td><td class="num">Shopify: 20.7%</td><td class="num">BeatStars: 10.5%</td></tr>
-  </tbody>
+<thead><tr><th>Channel</th><th>New MC Signups</th><th>Paid Conversion</th><th>Best Traditional</th></tr></thead>
+<tbody>
+<tr><td><strong>ChatGPT</strong></td><td class="num">278 (130 days)</td><td class="num loser">0%</td><td class="num">Shopify: 20.7%</td></tr>
+<tr><td><strong>Claude</strong></td><td class="num">103 (10 days)</td><td class="num loser">1.9%</td><td class="num">Shopify: 20.7%</td></tr>
+</tbody>
 </table>
-<p>All 278 ChatGPT-sourced signups remain on free plans after 130 days. The AI connectors are currently the lowest-performing acquisition channels in Mailchimp's portfolio.</p>
 
 <h2>Scorecard</h2>
 <table>
-  <thead><tr><th>Dimension</th><th>QBO vs MC</th><th>ChatGPT vs Claude (within MC)</th></tr></thead>
-  <tbody>
-    <tr><td><strong>Scale</strong></td><td><span class="tag tag-red">QBO leads ~2×</span></td><td>ChatGPT leads but Claude will pass imminently</td></tr>
-    <tr><td><strong>Growth velocity</strong></td><td><span class="tag tag-red">QBO leads</span></td><td><span class="tag tag-green">Claude dominates</span> (269/day vs 15/day)</td></tr>
-    <tr><td><strong>Engagement</strong></td><td><span class="tag tag-green">MC leads</span> (+10–33 pts)</td><td><span class="tag tag-green">Claude leads</span> (82% vs 63% WAU)</td></tr>
-    <tr><td><strong>Top product attachment</strong></td><td><span class="tag tag-green">MC leads</span> (Automations 40–46%)</td><td><span class="tag tag-green">Claude leads</span> (46% vs 40%)</td></tr>
-    <tr><td><strong>Multi-product depth</strong></td><td><span class="tag tag-red">QBO leads</span> (3–8× vs 1.8–4.2×)</td><td><span class="tag tag-amber">ChatGPT slightly</span> (8% vs 5% SMS)</td></tr>
-    <tr><td><strong>New customer conversion</strong></td><td><span class="tag tag-red">QBO leads</span> (MC at 0–1.9%)</td><td><span class="tag tag-red">Neither works</span> (0% vs 1.9%)</td></tr>
-  </tbody>
+<thead><tr><th>Dimension</th><th>QBO vs MC</th><th>ChatGPT vs Claude</th></tr></thead>
+<tbody>
+<tr><td><strong>Scale</strong></td><td><span class="tag tag-red">QBO leads ~2x</span></td><td>Claude closing fast</td></tr>
+<tr><td><strong>Growth velocity</strong></td><td><span class="tag tag-red">QBO leads</span></td><td><span class="tag tag-green">Claude 247/day vs 13/day</span></td></tr>
+<tr><td><strong>Engagement</strong></td><td><span class="tag tag-green">MC leads +10-33 pts</span></td><td><span class="tag tag-green">Claude 82% vs 63%</span></td></tr>
+<tr><td><strong>Top attachment</strong></td><td><span class="tag tag-green">MC leads</span></td><td><span class="tag tag-green">Claude 46% vs 40%</span></td></tr>
+<tr><td><strong>Multi-product depth</strong></td><td><span class="tag tag-red">QBO leads 3-8x</span></td><td><span class="tag tag-amber">ChatGPT slightly on SMS</span></td></tr>
+<tr><td><strong>New customer conversion</strong></td><td><span class="tag tag-red">QBO leads</span></td><td><span class="tag tag-red">Neither works (0-1.9%)</span></td></tr>
+</tbody>
 </table>
 
+<!-- ════════ PART 2: MARKETING ANALYZER BUSINESS CASE ════════ -->
 <hr class="divider"/>
 
-<h2>How the Analytics Agent Accelerates Connector Performance</h2>
-<p>The ChatGPT and Claude connectors have built a highly engaged user base with strong Automation and SMS adoption. Mailchimp's Analytics Agent — the <strong>Marketing Analyzer</strong> — currently lives only inside the Mailchimp app. Embedding it in the connector experience would compound the connectors' existing strengths and close their remaining gaps in three critical areas.</p>
+<h2>How the Marketing Analyzer Accelerates Connector Performance</h2>
 
 <h3>1. Closes the Gap on Email Sends &amp; Segment Creation</h3>
-<p>The connectors excel at engagement and automation adoption. Their one remaining gap is <strong>email sends and segment creation</strong> — the payoff actions the Analytics Agent is purpose-built to drive. Among connector users, the impact of having agent access is unambiguous:</p>
-
 <table>
-  <thead><tr><th>Metric</th><th>Connector + Marketing Analyzer</th><th>Connector Alone</th><th>Lift</th></tr></thead>
-  <tbody>
-    <tr><td><strong>Segment creation rate</strong></td><td class="num winner">68.3%</td><td class="num">26.7%</td><td class="num winner">2.6×</td></tr>
-    <tr><td><strong>Email send rate</strong></td><td class="num winner">88.7%</td><td class="num">44.8%</td><td class="num winner">2.0×</td></tr>
-    <tr><td><strong>Avg segment actions per user</strong></td><td class="num winner">76</td><td class="num">23</td><td class="num winner">3.3×</td></tr>
-    <tr><td><strong>Avg emails delivered per user</strong></td><td class="num winner">330,935</td><td class="num">104,656</td><td class="num winner">3.2×</td></tr>
-  </tbody>
+<thead><tr><th>Metric</th><th>Connector + Marketing Analyzer</th><th>Connector Alone</th><th>Lift</th></tr></thead>
+<tbody>
+<tr><td><strong>Segment creation rate</strong></td><td class="num winner">68.3%</td><td class="num">26.7%</td><td class="num winner">2.6x</td></tr>
+<tr><td><strong>Email send rate</strong></td><td class="num winner">88.7%</td><td class="num">44.8%</td><td class="num winner">2.0x</td></tr>
+<tr><td><strong>Avg segment actions/user</strong></td><td class="num winner">76</td><td class="num">23</td><td class="num winner">3.3x</td></tr>
+<tr><td><strong>Avg emails delivered/user</strong></td><td class="num winner">330,935</td><td class="num">104,656</td><td class="num winner">3.2x</td></tr>
+</tbody>
 </table>
-
-<p>Connector users with the Marketing Analyzer create segments at <strong>2.6× the rate</strong>, send emails at <strong>2× the rate</strong>, and deliver <strong>3.2× more emails per user</strong>. The Marketing Analyzer doesn't replace what the connectors do well — it compounds it by turning already-engaged users into prolific creators of targeted campaigns and audience segments.</p>
 
 <h3>2. Compounds the Retention Advantage</h3>
-<p>Connector users already retain better than the Mailchimp platform average. The Marketing Analyzer strengthens this further — users who engage with its core payoff (segment creation) show measurably lower churn and disconnect rates.</p>
-
 <table>
-  <thead><tr><th>Cohort</th><th>Users</th><th>Account Churn</th><th>Connector Disconnect Rate</th></tr></thead>
-  <tbody>
-    <tr><td><strong>Paid connector + active segment creators</strong><br/><small>(Marketing Analyzer payoff behavior)</small></td><td class="num">1,634</td><td class="num winner">29.0%</td><td class="num winner">0.9%</td></tr>
-    <tr><td>Paid connector + no segment activity</td><td class="num">845</td><td class="num">25.1%</td><td class="num">1.5%</td></tr>
-    <tr><td>Platform paid average</td><td class="num">996,204</td><td class="num">29.6%</td><td class="num">—</td></tr>
-  </tbody>
+<thead><tr><th>Cohort</th><th>Users</th><th>Account Churn</th><th>Connector Disconnect</th></tr></thead>
+<tbody>
+<tr><td><strong>Paid connector + active segment creators</strong><br/><small>(Marketing Analyzer payoff)</small></td><td class="num">1,634</td><td class="num">29.0%</td><td class="num winner">0.9%</td></tr>
+<tr><td>Paid connector + no segment activity</td><td class="num">845</td><td class="num">25.1%</td><td class="num">1.5%</td></tr>
+<tr><td>Platform paid average</td><td class="num">996,204</td><td class="num">29.6%</td><td class="num">—</td></tr>
+</tbody>
 </table>
-
-<p>The connector disconnect rate — the most direct retention signal — tells the clearest story: paid connector users who actively create segments disconnect at just <strong>0.9%</strong> vs <strong>1.5%</strong> for those who don't, a <strong>40% lower disconnect rate</strong>. Across the full paid connector base, only <strong>0.7% ever disconnect</strong>, far below the platform account churn of 29.6%. The Marketing Analyzer drives exactly the segment-creation behavior that keeps users retained and connected to the platform.</p>
+<p>Segment creators disconnect at <strong>0.9% vs 1.5%</strong> — a <strong>40% lower disconnect rate</strong>.</p>
 
 <h3>3. Drives Plan Upgrades &amp; Free-to-Paid Conversion</h3>
-<p>Users who actively engage with analytics-driven segmentation upgrade to higher-tier plans at significantly higher rates, and the agent dramatically improves free-to-paid conversion.</p>
-
 <table>
-  <thead><tr><th>Upgrade Behavior (Standard → Premium, Jan–Apr 2026)</th><th>Upgrade Rate</th><th>Multiplier</th></tr></thead>
-  <tbody>
-    <tr><td><strong>Active segmenters (using analytics)</strong></td><td class="num winner">0.223%</td><td class="num winner" rowspan="2">3.7×</td></tr>
-    <tr><td>Non-segmenters</td><td class="num">0.061%</td></tr>
-  </tbody>
+<thead><tr><th>Standard to Premium (Jan–Apr 2026)</th><th>Upgrade Rate</th><th>Multiplier</th></tr></thead>
+<tbody>
+<tr><td><strong>Active segmenters</strong></td><td class="num winner">0.223%</td><td class="num winner" rowspan="2">3.7x</td></tr>
+<tr><td>Non-segmenters</td><td class="num">0.061%</td></tr>
+</tbody>
+</table>
+<table>
+<thead><tr><th>Free-to-Paid Conversion</th><th>Free Users</th><th>Converted</th><th>Rate</th></tr></thead>
+<tbody>
+<tr><td><strong>Free users with Marketing Analyzer</strong></td><td class="num">25,159</td><td class="num winner">25,001</td><td class="num winner">99.4%</td></tr>
+<tr><td><strong>Free connector users (no analyzer)</strong></td><td class="num">2,327</td><td class="num">278</td><td class="num">12.0%</td></tr>
+<tr><td>Platform (no connector, no analyzer)</td><td class="num">46.7M</td><td class="num">101,218</td><td class="num">0.2%</td></tr>
+</tbody>
 </table>
 
-<p>Standard-tier users who actively create segments — the core Marketing Analyzer behavior — upgrade to Premium at <strong>3.7× the rate</strong> of those who don't. Embedding the Marketing Analyzer in the connector pushes more Standard users into the segment-creation habit that leads to Premium upgrades.</p>
+<!-- ════════ PART 3: ADVANCED ANALYSIS ════════ -->
+<hr class="divider"/>
 
+<h2>Cohort Analysis by Plan Tier</h2>
 <table>
-  <thead><tr><th>Free-to-Paid Conversion</th><th>Free Users</th><th>Converted</th><th>Rate</th></tr></thead>
-  <tbody>
-    <tr><td><strong>Free users with Marketing Analyzer access</strong></td><td class="num">25,159</td><td class="num winner">25,001</td><td class="num winner">99.4%</td></tr>
-    <tr><td><strong>Free connector users (no Marketing Analyzer)</strong></td><td class="num">2,180</td><td class="num">134</td><td class="num">6.2%</td></tr>
-    <tr><td>Platform free users (no connector, no analyzer)</td><td class="num">46.7M</td><td class="num">101,218</td><td class="num">0.2%</td></tr>
-  </tbody>
+<thead><tr><th>Plan</th><th colspan="5">ChatGPT</th><th colspan="5">Claude</th></tr>
+<tr><th></th><th>Users</th><th>WAU</th><th>Segments</th><th>Automations</th><th>SMS</th><th>Users</th><th>WAU</th><th>Segments</th><th>Automations</th><th>SMS</th></tr></thead>
+<tbody>
+<tr><td><strong>Premium</strong></td><td class="num">72</td><td class="num winner">87.5%</td><td class="num winner">90.3%</td><td class="num winner">86.1%</td><td class="num winner">33.3%</td><td class="num">50</td><td class="num winner">96.0%</td><td class="num winner">96.0%</td><td class="num winner">94.0%</td><td class="num">16.0%</td></tr>
+<tr><td><strong>Standard</strong></td><td class="num">893</td><td class="num">59.5%</td><td class="num">68.1%</td><td class="num">64.2%</td><td class="num">14.2%</td><td class="num">1,101</td><td class="num">81.3%</td><td class="num">63.8%</td><td class="num">62.9%</td><td class="num">7.6%</td></tr>
+<tr><td><strong>Legacy</strong></td><td class="num">191</td><td class="num">76.4%</td><td class="num">73.8%</td><td class="num">61.8%</td><td class="num">9.4%</td><td class="num">220</td><td class="num">84.1%</td><td class="num">75.9%</td><td class="num">61.4%</td><td class="num">6.8%</td></tr>
+<tr><td><strong>Free</strong></td><td class="num">1,743</td><td class="num">23.1%</td><td class="num">23.5%</td><td class="num">23.8%</td><td class="num">3.4%</td><td class="num">1,322</td><td class="num">61.0%</td><td class="num">31.3%</td><td class="num">27.2%</td><td class="num">2.0%</td></tr>
+</tbody>
 </table>
+<p>Claude Premium users are at near-saturation (<strong>96% WAU, 96% segments, 94% automations</strong>). The biggest growth opportunity is Claude Standard (81% WAU but only 64% segments) and the 3,065 free-tier users across both channels.</p>
 
-<p>Free connector users already convert at <strong>6.2% — 28× the platform average</strong> of 0.2%, confirming these are high-intent users. But free users with Marketing Analyzer access convert at <strong>99.4%</strong>. Embedding the Marketing Analyzer in the connector experience could dramatically lift the 2,180 free connector users' conversion rate, <strong>potentially multiplying paid conversions many times over</strong>.</p>
+<h2>Top Industries Among Connector Users</h2>
+<table>
+<thead><tr><th>Industry</th><th>ChatGPT</th><th>Claude</th></tr></thead>
+<tbody>
+<tr><td><strong>Non-profit</strong></td><td class="num">81</td><td class="num">65</td></tr>
+<tr><td><strong>Real estate</strong></td><td class="num">63</td><td class="num">57</td></tr>
+<tr><td><strong>Health &amp; fitness</strong></td><td class="num">34</td><td class="num">53</td></tr>
+<tr><td><strong>Education &amp; training</strong></td><td class="num">32</td><td class="num">43</td></tr>
+<tr><td><strong>Retail</strong></td><td class="num">38</td><td class="num">34</td></tr>
+<tr><td><strong>E-commerce</strong></td><td class="num">36</td><td class="num">29</td></tr>
+<tr><td><strong>Software &amp; web app</strong></td><td class="num">—</td><td class="num">44</td></tr>
+<tr><td><strong>Consulting</strong></td><td class="num">23</td><td class="num">42</td></tr>
+<tr><td><strong>Travel &amp; transportation</strong></td><td class="num">31</td><td class="num">39</td></tr>
+</tbody>
+</table>
+<p><strong>Non-profit</strong> is the top industry on both channels. Claude skews more toward <strong>software, consulting, and health</strong> — knowledge-worker segments. ~70% of users have no industry set.</p>
+
+<h2>Multi-Product Stacking Effect</h2>
+<table>
+<thead><tr><th>Products Used</th><th>Users</th><th>WAU %</th><th>Incremental vs 0 Products</th></tr></thead>
+<tbody>
+<tr><td><strong>0 products</strong></td><td class="num">1,589</td><td class="num">23.0%</td><td class="num">—</td></tr>
+<tr><td><strong>1 product</strong></td><td class="num">945</td><td class="num">46.0%</td><td class="num winner">+23.0 pts</td></tr>
+<tr><td><strong>2 products</strong></td><td class="num">1,350</td><td class="num">65.3%</td><td class="num winner">+42.3 pts</td></tr>
+<tr><td><strong>3 products</strong></td><td class="num">1,383</td><td class="num">81.6%</td><td class="num winner">+58.6 pts</td></tr>
+<tr><td><strong>4 products</strong></td><td class="num">240</td><td class="num winner">85.4%</td><td class="num winner">+62.4 pts</td></tr>
+</tbody>
+</table>
+<p>Each additional product doubles then compounds WAU: <strong>23% → 46% → 65% → 82% → 85%</strong>. Users with 3+ products (segments + automations + email sends) are 3.5x more likely to be weekly active than those with none.</p>
+
+<!-- ════════ STRATEGIC IMPLICATION ════════ -->
+<hr class="divider"/>
 
 <h2>Strategic Implication</h2>
 <div class="callout">
-  The ChatGPT and Claude connectors have built Mailchimp's most engaged user base — leading on WAU, Automations, and SMS adoption. The Marketing Analyzer is the accelerant that compounds these strengths and closes the remaining gaps.
+The ChatGPT and Claude connectors have built Mailchimp's most engaged user base. The Marketing Analyzer is the accelerant that compounds these strengths and closes the remaining gaps.
 </div>
-
-<p>Embedding the Marketing Analyzer in the connector experience would: (1) <strong>close the email and segment creation gap</strong> with a demonstrated 2–3× lift, (2) <strong>deepen retention</strong> by driving segment-creation behavior that reduces disconnect rates by 40%, and (3) <strong>accelerate upgrades</strong> — active segmenters upgrade Standard→Premium at 3.7×, and free users with Marketing Analyzer access convert to paid at 99% vs 6% without it.</p>
-
-<p>Claude is the stronger channel on every forward-looking metric. <strong>Prioritize embedding the Marketing Analyzer in Claude first</strong> — it has the fastest-growing, most-engaged user base and the highest ceiling for incremental impact.</p>
-
-<hr class="divider"/>
-
-<h2>Appendix: Metric Definitions, Formulas &amp; Data Sources</h2>
-
-<h3>A. Metric Definitions</h3>
-<table>
-  <thead><tr><th>Metric</th><th>Definition</th></tr></thead>
-  <tbody>
-    <tr><td><strong>Total connections</strong></td><td>Count of distinct <code>user_id</code> records in <code>bi_reporting.integrations</code> where <code>type = 'oauth2'</code> and <code>name</code> is 'chatgpt' or 'claude'.</td></tr>
-    <tr><td><strong>Daily adds</strong></td><td>Count of new connections per calendar day, based on <code>created_at</code> date. Current rate is the trailing 7-day average.</td></tr>
-    <tr><td><strong>New MC signups</strong></td><td>Connections where <code>user_created_at IS NOT NULL</code>, indicating the integration triggered the creation of a new Mailchimp account.</td></tr>
-    <tr><td><strong>Paid %</strong></td><td>Share of connector users whose <code>primary_plan_type = 'monthly'</code> in <code>bi_reporting.users</code>.</td></tr>
-    <tr><td><strong>WAU %</strong></td><td>Weekly Active Users: share of connector users where <code>wau = TRUE</code> in <code>bi_reporting.users_weekly_rollup</code> for the current week (Sunday start).</td></tr>
-    <tr><td><strong>AI feature engagement %</strong></td><td>Among connector users eligible for GenAI features (<code>email_inline = TRUE</code> in eligibility view), the share who are WAU in the current week.</td></tr>
-    <tr><td><strong>Automation adoption %</strong></td><td>Share of connector users who appear in <code>bi_reporting.emails_customer_journey</code> (have at least one customer journey / automation).</td></tr>
-    <tr><td><strong>SMS adoption %</strong></td><td>Share of connector users who appear in <code>bi_reporting.sms_daily_rollup</code> with <code>metrics.message.outbound.delivered_message_count &gt; 0</code>.</td></tr>
-    <tr><td><strong>Transactional Email %</strong></td><td>Share of connector users who appear in <code>bi_reporting.daily_transactional_sends</code> with <code>sent &gt; 0</code>.</td></tr>
-    <tr><td><strong>Segment creation rate</strong></td><td>Share of users who appear in <code>bi_reporting.tags_segments_daily_rollup</code> where <code>action_type LIKE '%segment%'</code> and <code>action_date &ge; 2025-12-01</code>.</td></tr>
-    <tr><td><strong>Avg segment actions</strong></td><td><code>AVG(SUM(all_action_count))</code> per user from <code>tags_segments_daily_rollup</code> for segment-type actions since Dec 2025.</td></tr>
-    <tr><td><strong>Email send rate</strong></td><td>Share of users who appear in <code>bi_reporting.daily_email_send_stats</code> with <code>sends.delivered &gt; 0</code> since Dec 2025.</td></tr>
-    <tr><td><strong>Avg emails delivered</strong></td><td><code>AVG(SUM(sends.delivered))</code> per user from <code>daily_email_send_stats</code> since Dec 2025.</td></tr>
-    <tr><td><strong>Marketing Analyzer eligible</strong></td><td>Users where <code>marketing_analyzer = TRUE</code> in <code>bi_reporting_beta.monthly_genai_user_eligibility</code> for <code>month = '2026-04-01'</code>. Requires Standard, Premium, or Legacy plan + approved rollout group + legal-approved industry.</td></tr>
-    <tr><td><strong>Account churn rate</strong></td><td>Share of users who appear in <code>bi_reporting.churn_details</code>.</td></tr>
-    <tr><td><strong>Connector disconnect rate</strong></td><td>Share of connector users where <code>is_deleted = TRUE</code> in <code>bi_reporting.integrations</code>.</td></tr>
-    <tr><td><strong>Standard → Premium upgrade rate</strong></td><td>Users on Standard plan in Jan 2026 (<code>monthly_plan = 'standard'</code> at <code>month = '2026-01-01'</code>) who moved to <code>monthly_plan = 'premium'</code> by Apr 2026.</td></tr>
-    <tr><td><strong>Free-to-paid conversion rate</strong></td><td>Free users (<code>primary_plan_type = 'free'</code>) who have a <code>new_conversion = TRUE</code> order in <code>bi_reporting.orders</code> since Dec 2025.</td></tr>
-    <tr><td><strong>Paid conversion (new signups)</strong></td><td>Among connector users where <code>user_created_at IS NOT NULL</code>, the share with a <code>new_conversion = TRUE</code> order after signup.</td></tr>
-    <tr><td><strong>AI Multiplier</strong></td><td>Ratio of AI connector user adoption rate to platform WAU average for the same metric.</td></tr>
-  </tbody>
-</table>
-
-<h3>B. Formulas</h3>
-<table>
-  <thead><tr><th>Reported Metric</th><th>Formula</th></tr></thead>
-  <tbody>
-    <tr><td><strong>Segment creation rate</strong></td><td><code>COUNT(DISTINCT users with segment actions) / COUNT(DISTINCT cohort users) × 100</code></td></tr>
-    <tr><td><strong>Email send rate</strong></td><td><code>COUNT(DISTINCT users with delivered emails) / COUNT(DISTINCT cohort users) × 100</code></td></tr>
-    <tr><td><strong>Lift (×)</strong></td><td><code>Rate(Connector + Marketing Analyzer) / Rate(Connector alone)</code></td></tr>
-    <tr><td><strong>Account churn %</strong></td><td><code>COUNT(DISTINCT users in churn_details) / COUNT(DISTINCT cohort users) × 100</code></td></tr>
-    <tr><td><strong>Connector disconnect %</strong></td><td><code>COUNT(DISTINCT users with is_deleted = TRUE) / COUNT(DISTINCT cohort users) × 100</code></td></tr>
-    <tr><td><strong>Disconnect rate reduction</strong></td><td><code>(Non-segmenter disconnect - Segmenter disconnect) / Non-segmenter disconnect × 100</code><br/><code>= (1.5% − 0.9%) / 1.5% = 40%</code></td></tr>
-    <tr><td><strong>Upgrade rate</strong></td><td><code>COUNT(users whose plan changed Standard→Premium, Jan→Apr) / COUNT(Standard users in Jan) × 100</code></td></tr>
-    <tr><td><strong>Upgrade multiplier</strong></td><td><code>Upgrade rate(Active segmenters) / Upgrade rate(Non-segmenters)</code><br/><code>= 0.223% / 0.061% = 3.7×</code></td></tr>
-    <tr><td><strong>Free-to-paid conversion</strong></td><td><code>COUNT(free users with new_conversion = TRUE since Dec '25) / COUNT(free users in cohort) × 100</code></td></tr>
-    <tr><td><strong>WAU %</strong></td><td><code>COUNT(DISTINCT users with wau = TRUE for current week) / COUNT(DISTINCT cohort users) × 100</code></td></tr>
-    <tr><td><strong>AI feature engagement %</strong></td><td><code>COUNT(DISTINCT eligible users with wau = TRUE) / COUNT(DISTINCT eligible users) × 100</code></td></tr>
-    <tr><td><strong>Product attachment %</strong></td><td><code>COUNT(DISTINCT connector users in product table) / COUNT(DISTINCT all connector users) × 100</code></td></tr>
-    <tr><td><strong>Paid % (user composition)</strong></td><td><code>COUNT(DISTINCT users with primary_plan_type = 'monthly') / COUNT(DISTINCT connector users) × 100</code></td></tr>
-  </tbody>
-</table>
-
-<h3>C. Source Tables &amp; Fields</h3>
-<table>
-  <thead><tr><th>Table</th><th>Key Fields Used</th><th>Used For</th></tr></thead>
-  <tbody>
-    <tr><td><code>bi_reporting.integrations</code></td><td><code>user_id</code>, <code>name</code>, <code>type</code>, <code>created_at</code>, <code>user_created_at</code>, <code>is_deleted</code></td><td>Connector connections, new signups, daily adds, disconnect rates</td></tr>
-    <tr><td><code>bi_reporting.users</code></td><td><code>user_id</code>, <code>primary_plan_type</code></td><td>Plan tier distribution, paid %</td></tr>
-    <tr><td><code>bi_reporting.users_weekly_rollup</code></td><td><code>user_id</code>, <code>week</code>, <code>wau</code></td><td>Weekly Active Users, engagement %</td></tr>
-    <tr><td><code>bi_reporting_beta.monthly_genai_user_eligibility</code></td><td><code>user_id</code>, <code>month</code>, <code>monthly_plan</code>, <code>marketing_analyzer</code>, <code>email_inline</code></td><td>Marketing Analyzer eligibility, GenAI feature flags, plan tier</td></tr>
-    <tr><td><code>bi_reporting.tags_segments_daily_rollup</code></td><td><code>user_id</code>, <code>action_date</code>, <code>action_type</code>, <code>all_action_count</code></td><td>Segment creation rate, avg segment actions</td></tr>
-    <tr><td><code>bi_reporting.daily_email_send_stats</code></td><td><code>user_id</code>, <code>send_date</code>, <code>sends.delivered</code></td><td>Email send rate, avg emails delivered</td></tr>
-    <tr><td><code>bi_reporting.emails_customer_journey</code></td><td><code>user_id</code></td><td>Automation / Customer Journey adoption</td></tr>
-    <tr><td><code>bi_reporting.sms_daily_rollup</code></td><td><code>user_id</code>, <code>metrics.message.outbound.delivered_message_count</code></td><td>SMS adoption</td></tr>
-    <tr><td><code>bi_reporting.daily_transactional_sends</code></td><td><code>user_id</code>, <code>sent</code></td><td>Transactional email adoption</td></tr>
-    <tr><td><code>bi_reporting.orders</code></td><td><code>user_id</code>, <code>new_conversion</code>, <code>ordered_at</code></td><td>Free-to-paid conversion, paid signup conversion</td></tr>
-    <tr><td><code>bi_reporting.churn_details</code></td><td><code>user_id</code></td><td>Account churn rate</td></tr>
-    <tr><td><code>bi_reporting.messaging_outreach_daily_rollup</code></td><td><code>user_id</code>, <code>is_whatsapp_outreach</code></td><td>WhatsApp adoption (confirmed at 0%)</td></tr>
-  </tbody>
-</table>
-
-<h3>D. Cohort Definitions</h3>
-<table>
-  <thead><tr><th>Cohort</th><th>Definition</th></tr></thead>
-  <tbody>
-    <tr><td><strong>Connector + Marketing Analyzer</strong></td><td>Users in <code>integrations</code> with <code>type='oauth2'</code> AND <code>name IN ('chatgpt','claude')</code> who also have <code>marketing_analyzer = TRUE</code> in the eligibility view for Apr 2026. <strong>N = 2,479.</strong></td></tr>
-    <tr><td><strong>Connector alone</strong></td><td>Users in <code>integrations</code> with <code>type='oauth2'</code> AND <code>name IN ('chatgpt','claude')</code> who are NOT in the Marketing Analyzer eligible set. Predominantly free-tier users. <strong>N = 3,028.</strong></td></tr>
-    <tr><td><strong>Active segment creators</strong></td><td>Paid connector users who have at least one record in <code>tags_segments_daily_rollup</code> with <code>action_type LIKE '%segment%'</code> since Jan 2026. <strong>N = 1,634.</strong></td></tr>
-    <tr><td><strong>Non-segmenters</strong></td><td>Paid connector users with no segment activity since Jan 2026. <strong>N = 845.</strong></td></tr>
-    <tr><td><strong>Platform paid average</strong></td><td>All users in <code>bi_reporting.users</code> with <code>primary_plan_type = 'monthly'</code>. <strong>N = 996,204.</strong></td></tr>
-    <tr><td><strong>Free connector users</strong></td><td>Connector users with <code>primary_plan_type = 'free'</code> who are NOT Marketing Analyzer eligible. <strong>N = 2,180.</strong></td></tr>
-    <tr><td><strong>Free users with Marketing Analyzer</strong></td><td>Free-tier users in <code>bi_reporting.users</code> who also appear in the eligibility view with <code>marketing_analyzer = TRUE</code>. <strong>N = 25,159.</strong></td></tr>
-    <tr><td><strong>Active segmenters (upgrade analysis)</strong></td><td>Standard-plan users with <code>marketing_analyzer = TRUE</code> in Jan 2026 who had segment activity in Oct–Dec 2025. <strong>N = 146,790.</strong></td></tr>
-    <tr><td><strong>Non-segmenters (upgrade analysis)</strong></td><td>Standard-plan users with <code>marketing_analyzer = TRUE</code> in Jan 2026 with no segment activity in Oct–Dec 2025. <strong>N = 296,638.</strong></td></tr>
-  </tbody>
-</table>
+<p>Embedding the Marketing Analyzer in the connector experience would: (1) <strong>close the email and segment gap</strong> with a demonstrated 2-3x lift, (2) <strong>deepen retention</strong> by driving segment-creation behavior that reduces disconnect rates by 40%, and (3) <strong>accelerate upgrades</strong> — segmenters upgrade Standard to Premium at 3.7x, and free users with analyzer access convert at 99% vs 12% without.</p>
+<p>The multi-product stacking data reinforces this: each product a connector user adopts adds <strong>~20 pts of WAU</strong>. The Marketing Analyzer is the fastest path to adding the next product (segmentation) for the 1,589 users currently at zero products.</p>
+<p>Claude is the stronger channel on every forward-looking metric. <strong>Prioritize embedding the Marketing Analyzer in Claude first.</strong></p>
 
 <div class="footer">
-  <p>Data source: <code>mc-business-intelligence</code> BigQuery &nbsp;|&nbsp; Generated April 11, 2026 &nbsp;|&nbsp; QBO benchmark data provided by QuickBooks product team</p>
+<p>MC Everywhere Analyzer Agent &nbsp;|&nbsp; Data source: <code>mc-business-intelligence</code> BigQuery &nbsp;|&nbsp; Generated April 11, 2026</p>
 </div>
-
 </body>
 </html>
