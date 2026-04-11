@@ -1,4 +1,7 @@
 node_modules/
+__pycache__/
+*.pyc
+.pytest_cache/
 reports/node_modules/
 reports/package-lock.json
 reports/generate_pdf.mjs

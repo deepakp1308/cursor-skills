@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>MC Everywhere Analyzer — Weekly Report</title>
+<style>
+  :root{--ink:#1a1a2e;--muted:#555;--accent:#2563eb;--red:#dc2626;--green:#16a34a;--border:#e2e8f0;--bg:#fff}
+  *{margin:0;padding:0;box-sizing:border-box}
+  body{font-family:"Segoe UI",system-ui,sans-serif;color:var(--ink);background:var(--bg);line-height:1.55;max-width:960px;margin:0 auto;padding:40px 32px 60px}
+  h1{font-size:1.65rem;font-weight:700;border-bottom:3px solid var(--accent);padding-bottom:8px;margin-bottom:4px}
+  .subtitle{color:var(--muted);font-size:.92rem;margin-bottom:28px}
+  h2{font-size:1.1rem;font-weight:700;margin:26px 0 10px;color:var(--accent)}
+  h3{font-size:.95rem;font-weight:700;margin:18px 0 8px;color:var(--ink)}
+  p,li{font-size:.9rem;margin-bottom:8px}
+  table{width:100%;border-collapse:collapse;font-size:.82rem;margin:10px 0 18px}
+  th,td{border:1px solid var(--border);padding:6px 10px;text-align:left}
+  th{background:#f8fafc;font-weight:600;white-space:nowrap}
+  td.num{text-align:right;font-variant-numeric:tabular-nums}
+  .winner{background:#f0fdf4;font-weight:600}
+  .callout{background:#eff6ff;border-left:4px solid var(--accent);padding:12px 16px;margin:16px 0;font-size:.88rem}
+  .divider{border:none;border-top:2px solid var(--accent);margin:36px 0 8px}
+  .footer{margin-top:32px;padding-top:12px;border-top:1px solid var(--border);font-size:.78rem;color:var(--muted)}
+  @media print{body{padding:20px;font-size:.85rem}h1{font-size:1.4rem}table{font-size:.78rem;break-inside:avoid}}
+</style>
+</head>
+<body>
+<h1>MC Everywhere Analyzer — Weekly Report</h1>
+<p class="subtitle">Generated {{ date }} | Data Quality: {{ dq_summary }}</p>
+
+{% if llm_eval and llm_eval.headline %}
+<div class="callout"><strong>{{ llm_eval.headline }}</strong></div>
+{% endif %}
+
+<h2>Marketing Analyzer Impact</h2>
+<table>
+<thead><tr><th>Metric</th><th>Connector + Analyzer</th><th>Connector Alone</th><th>Lift</th></tr></thead>
+<tbody>
+<tr><td><strong>Segment creation</strong></td><td class="num winner">{{ "%.1f"|format(results.analyzer_lift[0].segment_pct) if results.analyzer_lift else '?' }}%</td><td class="num">{{ "%.1f"|format(results.analyzer_lift[1].segment_pct) if results.analyzer_lift|length > 1 else '?' }}%</td><td class="num winner">{{ segment_lift }}x</td></tr>
+<tr><td><strong>Email sends</strong></td><td class="num winner">{{ "%.1f"|format(results.analyzer_lift[0].email_pct) if results.analyzer_lift else '?' }}%</td><td class="num">{{ "%.1f"|format(results.analyzer_lift[1].email_pct) if results.analyzer_lift|length > 1 else '?' }}%</td><td class="num winner">{{ email_lift }}x</td></tr>
+</tbody>
+</table>
+<p>Disconnect rate reduction: <strong>{{ disc_reduction }}%</strong> | Upgrade multiplier: <strong>{{ upgrade_mult }}x</strong> | Free-to-paid: <strong>{{ f2p_with }}%</strong> (with analyzer) vs <strong>{{ f2p_without }}%</strong> (without)</p>
+
+<hr class="divider"/>
+<h2>Recommendations</h2>
+{% for rec in recommendations %}
+<p><strong>[{{ rec.priority | upper }}]</strong> {{ rec.finding }} — <em>{{ rec.recommendation }}</em></p>
+{% endfor %}
+
+<hr class="divider"/>
+<h2>Funnel Analytics</h2>
+{% for f in funnel_rates %}
+<p><strong>{{ f.channel }}:</strong> WAU {{ f.became_wau_rate }}% → Email 30d {{ f.email_30d_rate }}% → Segment 30d {{ f.segment_30d_rate }}% → Automation {{ f.automation_rate }}% | Drop-off: {{ f.biggest_dropoff }}</p>
+{% endfor %}
+
+<h2>Feature-to-Conversion Lifts</h2>
+<table>
+<thead><tr><th>Feature</th><th>Conversion With</th><th>Conversion Without</th><th>Lift</th></tr></thead>
+<tbody>
+{% for fl in feature_lifts %}
+<tr><td>{{ fl.feature }}</td><td class="num">{{ fl.conversion_with }}%</td><td class="num">{{ fl.conversion_without }}%</td><td class="num winner">{{ fl.lift }}x</td></tr>
+{% endfor %}
+</tbody>
+</table>
+
+<h2>Multi-Product Stacking</h2>
+<table>
+<thead><tr><th>Products Used</th><th>Users</th><th>WAU %</th><th>Incremental WAU</th></tr></thead>
+<tbody>
+{% for s in stacking %}
+<tr><td>{{ s.product_count }}</td><td class="num">{{ s.users }}</td><td class="num">{{ s.wau_pct }}%</td><td class="num">+{{ s.incremental_wau }} pts</td></tr>
+{% endfor %}
+</tbody>
+</table>
+
+<div class="footer">
+<p>MC Everywhere Analyzer Agent | Data source: mc-business-intelligence BigQuery</p>
+</div>
+</body>
+</html>
