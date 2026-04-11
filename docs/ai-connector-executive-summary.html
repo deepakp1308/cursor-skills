@@ -43,6 +43,12 @@
     margin: 26px 0 10px;
     color: var(--accent);
   }
+  h3 {
+    font-size: 0.95rem;
+    font-weight: 700;
+    margin: 18px 0 8px;
+    color: var(--ink);
+  }
   p, li { font-size: 0.9rem; margin-bottom: 8px; }
   ul { padding-left: 20px; margin-bottom: 12px; }
   table {
@@ -86,6 +92,11 @@
     background: #fef2f2;
     border-left-color: var(--red);
   }
+  .divider {
+    border: none;
+    border-top: 2px solid var(--accent);
+    margin: 36px 0 8px;
+  }
   .footer {
     margin-top: 32px;
     padding-top: 12px;
@@ -107,7 +118,10 @@
 <h1>AI Connector Channel Performance: Executive Summary</h1>
 <p class="subtitle">Mailchimp vs QuickBooks &amp; ChatGPT vs Claude &nbsp;|&nbsp; April 11, 2026</p>
 
-<!-- ───── SCALE ───── -->
+<!-- ───────────────────────────────────────────── -->
+<!-- PART 1: CHANNEL PERFORMANCE                   -->
+<!-- ───────────────────────────────────────────── -->
+
 <h2>Scale &amp; Growth Velocity</h2>
 
 <table>
@@ -121,14 +135,12 @@
   </tbody>
 </table>
 
-<p>Mailchimp is at roughly <strong>half of QBO's scale</strong> on both channels. Claude is the growth story on both platforms — QBO's Claude overtook ChatGPT in 13 days; Mailchimp's Claude will overtake ChatGPT within days at current rates. The critical difference: QBO's ChatGPT holds steady at ~60/day while <strong>Mailchimp's ChatGPT has decayed 67%</strong> from its Jan peak of 45/day to just 15/day. Claude's daily velocity is comparable across platforms (~269 MC vs 280–440 QBO).</p>
+<p>Mailchimp is at roughly <strong>half of QBO's scale</strong> on both channels. Claude is the growth story on both platforms — QBO's Claude overtook ChatGPT in 13 days; Mailchimp's Claude will overtake ChatGPT within days. The critical difference: QBO's ChatGPT holds steady at ~60/day while <strong>Mailchimp's ChatGPT has decayed 67%</strong> from its Jan peak of 45/day to just 15/day. Claude's daily velocity is comparable across platforms (~269 MC vs 280–440 QBO).</p>
 
-<!-- ───── COMPOSITION ───── -->
 <h2>User Composition: Existing Accounts, Not New Customers</h2>
 
-<p>Over <strong>90% of both ChatGPT and Claude connections on Mailchimp are existing accounts</strong>. Of the connected user base, Claude skews more toward paid plans (<strong>63.4% paid</strong>) than ChatGPT (<strong>52.6% paid</strong>) — both far above any other Mailchimp integration channel (Shopify: 10%, Canva: 18%). These are power users adding AI tools to active accounts, not new customers discovering Mailchimp.</p>
+<p>Over <strong>90% of both ChatGPT and Claude connections on Mailchimp are existing accounts</strong>. Claude skews more toward paid plans (<strong>63.4% paid</strong>) than ChatGPT (<strong>52.6% paid</strong>) — both far above any other integration channel (Shopify: 10%, Canva: 18%). These are power users adding AI tools to active accounts, not new customers discovering Mailchimp.</p>
 
-<!-- ───── ENGAGEMENT ───── -->
 <h2>Engagement: Mailchimp's Advantage Over QBO — Claude Leads ChatGPT</h2>
 
 <table>
@@ -141,9 +153,8 @@
   </tbody>
 </table>
 
-<p>Mailchimp outperforms QBO on engagement across every tier. Within Mailchimp, <strong>Claude users are dramatically more active than ChatGPT</strong>: 82% weekly active vs 63%, with Premium Claude at a near-perfect 96%. Part of this reflects Claude's recency (10 days vs 130), but ChatGPT's 63% at maturity still exceeds QBO's best number (53%). Even ChatGPT's free-tier users show 23% WAU, while Claude's free tier hits 61%.</p>
+<p>Mailchimp outperforms QBO on engagement across every tier. Within Mailchimp, <strong>Claude users are dramatically more active than ChatGPT</strong>: 82% weekly active vs 63%, with Premium Claude at 96%. ChatGPT's 63% at maturity still exceeds QBO's best (53%).</p>
 
-<!-- ───── PRODUCT ATTACHMENT ───── -->
 <h2>Product Attachment: Automations Strong, Secondary Products Lag</h2>
 
 <table>
@@ -158,9 +169,8 @@
   </tbody>
 </table>
 
-<p>Automations is Mailchimp's standout — <strong>46% for Claude</strong> and <strong>40% for ChatGPT</strong>, nearly double the platform average and exceeding QBO's top metric (Payments at 29%). Claude leads ChatGPT by 5.5 pts. However, QBO's <strong>multi-product multiplier is 3–8×</strong> vs Mailchimp's <strong>1.8–4.2×</strong>. QBO's depth across secondary products (Payroll 19%, BillPay 18%) far exceeds Mailchimp's SMS at 5–8%. ChatGPT edges Claude on SMS (8% vs 5%), likely because its older user base has had more time to expand into paid add-ons.</p>
+<p>Automations is Mailchimp's standout — <strong>46% for Claude, 40% for ChatGPT</strong>, nearly double the platform average and exceeding QBO's top metric (Payments at 29%). However, QBO's multi-product multiplier is 3–8× vs Mailchimp's 1.8–4.2×, and QBO's secondary products (Payroll 19%, BillPay 18%) far exceed Mailchimp's SMS at 5–8%.</p>
 
-<!-- ───── ACQUISITION ───── -->
 <h2>New Customer Acquisition <span class="tag tag-red">Critical Failure</span></h2>
 
 <table>
@@ -173,9 +183,8 @@
   </tbody>
 </table>
 
-<p>All 278 ChatGPT-sourced signups remain on free plans after 130 days — <strong>not one has converted to paid</strong>. Claude has 2 free-trial starts out of 103. Even the weakest traditional channel converts at 7–10%. The AI connectors are <strong>the lowest-performing acquisition channels in Mailchimp's entire portfolio</strong>. QBO did not report this metric separately, but their strong attachment numbers suggest their AI-sourced users monetize; Mailchimp's do not.</p>
+<p>All 278 ChatGPT-sourced signups remain on free plans after 130 days — <strong>not one has converted to paid</strong>. Claude has 2 free-trial starts out of 103. The AI connectors are <strong>the lowest-performing acquisition channels in Mailchimp's entire portfolio</strong>.</p>
 
-<!-- ───── SCORECARD ───── -->
 <h2>Scorecard</h2>
 
 <table>
@@ -192,49 +201,51 @@
   </tbody>
 </table>
 
-<!-- ───── ANALYTICS AGENT BUSINESS CASE ───── -->
-<h2>The Case for Embedding the Analytics Agent in ChatGPT &amp; Claude <span class="tag tag-green">Opportunity</span></h2>
+<!-- ───────────────────────────────────────────── -->
+<!-- PART 2: ANALYTICS AGENT BUSINESS CASE         -->
+<!-- ───────────────────────────────────────────── -->
 
-<p>Mailchimp's Analytics Agent — <strong>Marketing Analyzer</strong>, <strong>Segmentation AI</strong>, and <strong>CJB Smart Draft</strong> — currently lives <strong>only inside the Mailchimp app</strong> for paid users. It is <strong>not</strong> part of the ChatGPT or Claude connector experience today. The data below makes the case for why it should be.</p>
+<hr class="divider"/>
 
-<h2 style="font-size:0.95rem; margin-top:20px;">1. Connector Users Already Outperform In-App Analytics Users — Without the Agent</h2>
+<h2>The Case for Embedding the Analytics Agent in ChatGPT &amp; Claude</h2>
 
-<p>Even without the Analytics Agent, ChatGPT/Claude connector users are <strong>more engaged and more productive</strong> than in-app users who have the full analytics suite:</p>
+<p>Mailchimp's Analytics Agent — <strong>Marketing Analyzer</strong>, <strong>Segmentation AI</strong>, and <strong>CJB Smart Draft</strong> — currently lives <strong>only inside the Mailchimp app</strong> for paid users. It is <strong>not</strong> part of the ChatGPT or Claude connector experience today. The data below compares connector users (who lack the agent) against in-app users (who have it) to quantify the opportunity.</p>
+
+<h3>1. Engagement: Connector Users Are Already More Engaged — Without the Agent</h3>
 
 <table>
   <thead>
-    <tr><th>Metric</th><th>Connector Users<br/><small>(no Analytics Agent)</small></th><th>In-App Users<br/><small>(with Analytics Agent)</small></th><th>Connector Lift</th></tr>
+    <tr><th>Metric</th><th>Connector Users<br/><small>(no Analytics Agent)</small></th><th>In-App Users<br/><small>(with Analytics Agent)</small></th><th>Delta</th></tr>
   </thead>
   <tbody>
     <tr><td><strong>WAU %</strong></td><td class="num winner">54.7%</td><td class="num">52.7%</td><td class="num">+2 pts</td></tr>
     <tr><td><strong>Automation adoption</strong></td><td class="num winner">42.6%</td><td class="num">37.3%</td><td class="num">+5.3 pts</td></tr>
-    <tr><td><strong>Email send rate</strong></td><td class="num">64.6%</td><td class="num winner">76.7%</td><td class="num loser">−12.1 pts</td></tr>
-    <tr><td><strong>Segment creation</strong></td><td class="num">45.4%</td><td class="num winner">47.4%</td><td class="num">−2 pts</td></tr>
     <tr><td><strong>SMS adoption</strong></td><td class="num winner">6.4%</td><td class="num">3.7%</td><td class="num">+2.7 pts</td></tr>
-    <tr><td><strong>Churn rate</strong></td><td class="num winner">23.5%</td><td class="num">28.5%</td><td class="num winner">5 pts lower churn</td></tr>
+    <tr><td><strong>Email send rate</strong></td><td class="num">64.6%</td><td class="num winner">76.7%</td><td class="num loser">−12.1 pts</td></tr>
+    <tr><td><strong>Segment creation</strong></td><td class="num">45.4%</td><td class="num winner">47.4%</td><td class="num">−2.0 pts</td></tr>
   </tbody>
 </table>
 
-<p>Connector users lead on WAU, Automations, SMS, and retention. But they <strong>trail on email sends (−12 pts) and segment creation (−2 pts)</strong> — precisely the actions the Analytics Agent is designed to drive. This is the gap the agent would close.</p>
+<p>Connector users lead on WAU, Automations, and SMS. But they <strong>trail on email sends (−12 pts) and segment creation (−2 pts)</strong> — precisely the payoff actions the Analytics Agent drives. This is the gap embedding the agent would close.</p>
 
-<h2 style="font-size:0.95rem; margin-top:20px;">2. By Plan Tier: Connector Users Crush In-App at Every Level</h2>
+<h3>2. Adoption by Plan Tier: Connector Users Outperform In-App at Every Level</h3>
 
 <table>
   <thead>
     <tr><th>Plan</th><th colspan="4">Connector (no Analytics Agent)</th><th colspan="4">In-App (with Analytics Agent)</th></tr>
-    <tr><th></th><th>WAU%</th><th>Segments</th><th>Automations</th><th>SMS</th><th>WAU%</th><th>Segments</th><th>Automations</th><th>SMS</th></tr>
+    <tr><th></th><th>WAU</th><th>Segments</th><th>Automations</th><th>SMS</th><th>WAU</th><th>Segments</th><th>Automations</th><th>SMS</th></tr>
   </thead>
   <tbody>
     <tr><td><strong>Premium</strong></td><td class="num winner">91%</td><td class="num winner">92%</td><td class="num winner">89%</td><td class="num winner">26%</td><td class="num">82%</td><td class="num">77%</td><td class="num">61%</td><td class="num">8%</td></tr>
     <tr><td><strong>Standard</strong></td><td class="num winner">71%</td><td class="num winner">66%</td><td class="num winner">63%</td><td class="num winner">11%</td><td class="num">48%</td><td class="num">45%</td><td class="num">38%</td><td class="num">4%</td></tr>
     <tr><td><strong>Legacy</strong></td><td class="num winner">80%</td><td class="num winner">75%</td><td class="num winner">61%</td><td class="num winner">8%</td><td class="num">65%</td><td class="num">52%</td><td class="num">34%</td><td class="num">3%</td></tr>
-    <tr><td><strong>Free</strong></td><td class="num">39%</td><td class="num">27%</td><td class="num">25%</td><td class="num">3%</td><td colspan="4" style="text-align:center; color:#888;"><em>N/A — free users not eligible for Analytics Agent</em></td></tr>
+    <tr><td><strong>Free</strong></td><td class="num">39%</td><td class="num">27%</td><td class="num">25%</td><td class="num">3%</td><td colspan="4" style="text-align:center; color:#888;"><em>N/A — not eligible for Analytics Agent</em></td></tr>
   </tbody>
 </table>
 
-<p>At every paid tier, connector users <strong>without</strong> the Analytics Agent outperform in-app users <strong>with</strong> it — often dramatically. Standard-tier connector users achieve 66% segment creation vs 45% for in-app analytics users (+21 pts). Premium connector users hit 92% vs 77% (+15 pts). <strong>Imagine what happens when you give this already-engaged cohort the Analytics Agent on top.</strong></p>
+<p>At every paid tier, connector users <strong>without</strong> the Analytics Agent outperform in-app users <strong>with</strong> it — often by wide margins. Standard-tier connector users achieve 66% segment creation vs 45% in-app (+21 pts); Premium hits 92% vs 77% (+15 pts). Giving this already-engaged cohort the Analytics Agent would compound an existing advantage.</p>
 
-<h2 style="font-size:0.95rem; margin-top:20px;">3. Volume Impact: Connector Users Send More and Segment More</h2>
+<h3>3. Meaningful Actions: Connector Users Create More Segments and Send More Email</h3>
 
 <table>
   <thead>
@@ -242,16 +253,16 @@
   </thead>
   <tbody>
     <tr><td><strong>Connector – Premium</strong></td><td class="num winner">3,073,035</td><td class="num winner">225</td></tr>
-    <tr><td>In-App Analytics – Premium</td><td class="num">1,733,906</td><td class="num">177</td></tr>
+    <tr><td>In-App w/ Agent – Premium</td><td class="num">1,733,906</td><td class="num">177</td></tr>
     <tr><td><strong>Connector – Standard</strong></td><td class="num winner">88,219</td><td class="num winner">65</td></tr>
-    <tr><td>In-App Analytics – Standard</td><td class="num">49,862</td><td class="num">28</td></tr>
+    <tr><td>In-App w/ Agent – Standard</td><td class="num">49,862</td><td class="num">28</td></tr>
     <tr><td><strong>Connector – Free</strong></td><td class="num">104,656</td><td class="num">23</td></tr>
   </tbody>
 </table>
 
-<p>Premium connector users deliver <strong>1.8× more emails</strong> and create <strong>1.3× more segments</strong> than in-app analytics Premium users. Standard connector users deliver <strong>1.8× more emails</strong> and create <strong>2.3× more segments</strong>. Adding the Analytics Agent to this cohort would compound an already-superior behavior pattern.</p>
+<p>Premium connector users deliver <strong>1.8× more emails</strong> and <strong>1.3× more segments</strong> than Premium in-app analytics users. Standard connector users deliver <strong>1.8× more emails</strong> and <strong>2.3× more segments</strong>. The Analytics Agent would add AI-powered segmentation and campaign insights to a user base that is already outproducing the users who have the agent today.</p>
 
-<h2 style="font-size:0.95rem; margin-top:20px;">4. The Conversion Case: Analytics Agent as Upgrade Trigger</h2>
+<h3>4. Paid Signup &amp; Conversion: The Agent Is the Difference Between 0.5% and 99.9%</h3>
 
 <table>
   <thead>
@@ -264,12 +275,12 @@
 </table>
 
 <div class="callout callout-red">
-  <strong>The starkest number in this entire analysis.</strong> Users who sign up through channels that give them access to the Analytics Agent convert to paid at <strong>99.9%</strong>. Users who sign up through ChatGPT/Claude without it convert at <strong>0.5%</strong>. The Analytics Agent isn't just a nice-to-have — it's the difference between a user who pays and a user who doesn't.
+  Users who sign up through channels that give them access to the Analytics Agent convert to paid at <strong>99.9%</strong>. Users who sign up through ChatGPT/Claude without it convert at <strong>0.5%</strong>. The agent is the difference between a user who pays and one who doesn't.
 </div>
 
-<p>Today, <strong>3,028 free-tier connector users (55% of all connector users)</strong> have no access to Marketing Analyzer, Segmentation AI, or Smart Draft. Their segment creation rate is 27%, their automation rate is 25%, and their paid conversion is effectively zero. Surfacing even a limited version of the Analytics Agent through the connector would create a natural "try → value → upgrade" funnel that doesn't exist today.</p>
+<p>Today, <strong>3,028 free-tier connector users (55% of all connector users)</strong> have no access to Marketing Analyzer, Segmentation AI, or Smart Draft. Their segment creation rate is 27%, their automation rate is 25%, and their paid conversion is effectively zero. Surfacing the Analytics Agent through the connector creates a "try → value → upgrade" funnel that does not exist today.</p>
 
-<h2 style="font-size:0.95rem; margin-top:20px;">5. Retention: Connector + Agent = Lowest-Churn Cohort</h2>
+<h3>5. Retention: Connector Users Already Churn Less</h3>
 
 <table>
   <thead>
@@ -281,22 +292,22 @@
   </tbody>
 </table>
 
-<p>Connector users already churn at <strong>5 points less</strong> than in-app analytics users. The combination of external AI connector + Mailchimp's Analytics Agent would create the <strong>stickiest user cohort on the platform</strong>: users who manage Mailchimp through ChatGPT/Claude (high engagement) and get AI-powered analytics driving meaningful actions (high payoff). This dual-moat would make it exceptionally hard for competitors to displace.</p>
+<p>Connector users already churn at <strong>5 points less</strong> than in-app analytics users. Adding the Analytics Agent creates a dual engagement moat — users who manage Mailchimp through ChatGPT/Claude <em>and</em> get AI-powered analytics — making it exceptionally hard for competitors to displace them.</p>
 
-<h2 style="font-size:0.95rem; margin-top:20px;">6. Summary: Impact of Embedding the Analytics Agent</h2>
+<h3>6. Projected Impact Summary</h3>
 
 <table>
   <thead>
-    <tr><th>Dimension</th><th>Current State<br/><small>(Connector without Agent)</small></th><th>Projected State<br/><small>(Connector with Agent)</small></th><th>Evidence</th></tr>
+    <tr><th>Dimension</th><th>Current State<br/><small>(Connector without Agent)</small></th><th>Projected with Agent</th><th>Evidence Basis</th></tr>
   </thead>
   <tbody>
-    <tr><td><strong>Engagement (WAU)</strong></td><td class="num">55%</td><td class="num winner">65–75%</td><td>In-app analytics users + connector engagement patterns</td></tr>
-    <tr><td><strong>Segment creation</strong></td><td class="num">45%</td><td class="num winner">65–70%</td><td>In-app Standard at 45% → Connector Standard already at 66% without agent</td></tr>
-    <tr><td><strong>Automation adoption</strong></td><td class="num">43%</td><td class="num winner">55–65%</td><td>Connector already 5+ pts above in-app; agent would compound</td></tr>
-    <tr><td><strong>Email sends</strong></td><td class="num">65%</td><td class="num winner">80–85%</td><td>Closing the −12 pt gap vs in-app analytics users</td></tr>
-    <tr><td><strong>SMS adoption</strong></td><td class="num">6.4%</td><td class="num winner">10–15%</td><td>Connector already 1.7× in-app; analytics-driven targeting boosts SMS</td></tr>
-    <tr><td><strong>Paid conversion (new signups)</strong></td><td class="num loser">0.5%</td><td class="num winner">10–20%</td><td>In-app analytics channels at 99.9%; even 10% would transform the funnel</td></tr>
-    <tr><td><strong>Churn</strong></td><td class="num">23.5%</td><td class="num winner">18–20%</td><td>Dual engagement moat (connector + analytics = stickiest cohort)</td></tr>
+    <tr><td><strong>Engagement (WAU)</strong></td><td class="num">55%</td><td class="num winner">65–75%</td><td>Connector already leads in-app; agent compounds</td></tr>
+    <tr><td><strong>Segment creation</strong></td><td class="num">45%</td><td class="num winner">65–70%</td><td>Connector Standard at 66% without agent; agent lifts free-tier from 27%</td></tr>
+    <tr><td><strong>Automation adoption</strong></td><td class="num">43%</td><td class="num winner">55–65%</td><td>Already +5 pts above in-app; analytics-driven triggers add more</td></tr>
+    <tr><td><strong>Email sends</strong></td><td class="num">65%</td><td class="num winner">80–85%</td><td>Closes the −12 pt gap vs in-app analytics users</td></tr>
+    <tr><td><strong>SMS adoption</strong></td><td class="num">6.4%</td><td class="num winner">10–15%</td><td>AI-driven audience targeting surfaces SMS-ready segments</td></tr>
+    <tr><td><strong>Paid conversion</strong></td><td class="num loser">0.5%</td><td class="num winner">10–20%</td><td>In-app channels with agent convert at 99.9%; even 10% transforms funnel</td></tr>
+    <tr><td><strong>Churn</strong></td><td class="num">23.5%</td><td class="num winner">18–20%</td><td>Dual moat: external AI connector + in-app analytics = stickiest cohort</td></tr>
   </tbody>
 </table>
 
@@ -304,17 +315,17 @@
 <h2>Strategic Implication</h2>
 
 <div class="callout">
-  The AI connectors deliver <strong>strong engagement and Automations adoption among existing paid users</strong> — a genuine competitive advantage over QBO. But they are <strong>failing completely as acquisition channels</strong>: zero meaningful paid conversion from new signups, which even the weakest traditional channel achieves at 7–10%.
+  The AI connectors deliver <strong>strong engagement and Automations adoption among existing paid users</strong> — a genuine competitive advantage over QBO. But they are <strong>failing as acquisition channels</strong>: zero meaningful paid conversion from new signups, which even the weakest traditional channel achieves at 7–10%.
 </div>
 
-<p><strong>The Analytics Agent is the single highest-leverage fix.</strong> Connector users are already Mailchimp's most engaged cohort — outperforming in-app analytics users on WAU, Automations, SMS, and churn at every plan tier. But without the Analytics Agent, they underperform on the exact actions it drives: email sends (−12 pts) and segment creation (−2 pts). The paid conversion gap is the most damning evidence: channels with the agent convert at 99.9%; without it, 0.5%.</p>
+<p><strong>The Analytics Agent is the single highest-leverage fix.</strong> Connector users are already Mailchimp's most engaged cohort — outperforming in-app analytics users on WAU, Automations, SMS, and churn at every plan tier. But without the agent, they underperform on the exact actions it drives: email sends (−12 pts) and segment creation (−2 pts). The paid conversion gap is the most revealing evidence: channels with the agent convert at 99.9%; without it, 0.5%.</p>
 
-<p>Embedding the Analytics Agent in the ChatGPT/Claude connector would: (1) <strong>close the email/segment gap</strong> for 5,500 already-engaged users, (2) <strong>create an upgrade trigger</strong> for 3,028 free users who currently have zero reason to convert, (3) <strong>push Standard users toward Premium-level behavior</strong>, and (4) <strong>compound the retention advantage</strong> into the stickiest user cohort on the platform.</p>
+<p>Embedding the Analytics Agent in the connector would: (1) <strong>close the email and segment gap</strong> for 5,500 already-engaged users, (2) <strong>create an upgrade trigger</strong> for 3,028 free users who currently have zero reason to convert, (3) <strong>push Standard users toward Premium-level behavior</strong>, and (4) <strong>compound the retention advantage</strong> into the lowest-churn cohort on the platform.</p>
 
-<p>Claude is the stronger channel on every forward-looking metric (velocity, engagement, Automations attachment), while ChatGPT is declining and should be monitored for intervention. <strong>Prioritize embedding the Analytics Agent in Claude first</strong> — it has the fastest-growing, most-engaged user base and the highest ceiling for incremental payoff.</p>
+<p>Claude is the stronger channel on every forward-looking metric. <strong>Prioritize embedding the Analytics Agent in Claude first</strong> — it has the fastest-growing, most-engaged user base and the highest ceiling for incremental payoff.</p>
 
 <div class="footer">
-  <p>Data source: <code>mc-business-intelligence</code> BigQuery &nbsp;|&nbsp; Tables: <code>bi_reporting.integrations</code>, <code>bi_reporting.orders</code>, <code>bi_reporting.users</code>, <code>bi_reporting.users_weekly_rollup</code>, <code>bi_reporting_beta.monthly_genai_user_eligibility</code>, <code>bi_reporting.sms_daily_rollup</code>, <code>bi_reporting.emails_customer_journey</code>, <code>bi_reporting.daily_transactional_sends</code>, <code>bi_reporting.messaging_outreach_daily_rollup</code></p>
+  <p>Data source: <code>mc-business-intelligence</code> BigQuery &nbsp;|&nbsp; Tables: <code>bi_reporting.integrations</code>, <code>bi_reporting.orders</code>, <code>bi_reporting.users</code>, <code>bi_reporting.users_weekly_rollup</code>, <code>bi_reporting_beta.monthly_genai_user_eligibility</code>, <code>bi_reporting.sms_daily_rollup</code>, <code>bi_reporting.emails_customer_journey</code>, <code>bi_reporting.daily_transactional_sends</code>, <code>bi_reporting.messaging_outreach_daily_rollup</code>, <code>bi_reporting.tags_segments_daily_rollup</code>, <code>bi_reporting.daily_email_send_stats</code>, <code>bi_reporting.churn_details</code></p>
   <p>Generated April 11, 2026 &nbsp;|&nbsp; QBO benchmark data provided by QuickBooks product team</p>
 </div>
 
