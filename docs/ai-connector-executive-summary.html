@@ -160,6 +160,92 @@
 
 <p>Claude is the stronger channel on every forward-looking metric. <strong>Prioritize embedding the Marketing Analyzer in Claude first</strong> — it has the fastest-growing, most-engaged user base and the highest ceiling for incremental impact.</p>
 
+<hr class="divider"/>
+
+<h2>Appendix: Metric Definitions, Formulas &amp; Data Sources</h2>
+
+<h3>A. Metric Definitions</h3>
+<table>
+  <thead><tr><th>Metric</th><th>Definition</th></tr></thead>
+  <tbody>
+    <tr><td><strong>Total connections</strong></td><td>Count of distinct <code>user_id</code> records in <code>bi_reporting.integrations</code> where <code>type = 'oauth2'</code> and <code>name</code> is 'chatgpt' or 'claude'.</td></tr>
+    <tr><td><strong>Daily adds</strong></td><td>Count of new connections per calendar day, based on <code>created_at</code> date. Current rate is the trailing 7-day average.</td></tr>
+    <tr><td><strong>New MC signups</strong></td><td>Connections where <code>user_created_at IS NOT NULL</code>, indicating the integration triggered the creation of a new Mailchimp account.</td></tr>
+    <tr><td><strong>Paid %</strong></td><td>Share of connector users whose <code>primary_plan_type = 'monthly'</code> in <code>bi_reporting.users</code>.</td></tr>
+    <tr><td><strong>WAU %</strong></td><td>Weekly Active Users: share of connector users where <code>wau = TRUE</code> in <code>bi_reporting.users_weekly_rollup</code> for the current week (Sunday start).</td></tr>
+    <tr><td><strong>AI feature engagement %</strong></td><td>Among connector users eligible for GenAI features (<code>email_inline = TRUE</code> in eligibility view), the share who are WAU in the current week.</td></tr>
+    <tr><td><strong>Automation adoption %</strong></td><td>Share of connector users who appear in <code>bi_reporting.emails_customer_journey</code> (have at least one customer journey / automation).</td></tr>
+    <tr><td><strong>SMS adoption %</strong></td><td>Share of connector users who appear in <code>bi_reporting.sms_daily_rollup</code> with <code>metrics.message.outbound.delivered_message_count &gt; 0</code>.</td></tr>
+    <tr><td><strong>Transactional Email %</strong></td><td>Share of connector users who appear in <code>bi_reporting.daily_transactional_sends</code> with <code>sent &gt; 0</code>.</td></tr>
+    <tr><td><strong>Segment creation rate</strong></td><td>Share of users who appear in <code>bi_reporting.tags_segments_daily_rollup</code> where <code>action_type LIKE '%segment%'</code> and <code>action_date &ge; 2025-12-01</code>.</td></tr>
+    <tr><td><strong>Avg segment actions</strong></td><td><code>AVG(SUM(all_action_count))</code> per user from <code>tags_segments_daily_rollup</code> for segment-type actions since Dec 2025.</td></tr>
+    <tr><td><strong>Email send rate</strong></td><td>Share of users who appear in <code>bi_reporting.daily_email_send_stats</code> with <code>sends.delivered &gt; 0</code> since Dec 2025.</td></tr>
+    <tr><td><strong>Avg emails delivered</strong></td><td><code>AVG(SUM(sends.delivered))</code> per user from <code>daily_email_send_stats</code> since Dec 2025.</td></tr>
+    <tr><td><strong>Marketing Analyzer eligible</strong></td><td>Users where <code>marketing_analyzer = TRUE</code> in <code>bi_reporting_beta.monthly_genai_user_eligibility</code> for <code>month = '2026-04-01'</code>. Requires Standard, Premium, or Legacy plan + approved rollout group + legal-approved industry.</td></tr>
+    <tr><td><strong>Account churn rate</strong></td><td>Share of users who appear in <code>bi_reporting.churn_details</code>.</td></tr>
+    <tr><td><strong>Connector disconnect rate</strong></td><td>Share of connector users where <code>is_deleted = TRUE</code> in <code>bi_reporting.integrations</code>.</td></tr>
+    <tr><td><strong>Standard → Premium upgrade rate</strong></td><td>Users on Standard plan in Jan 2026 (<code>monthly_plan = 'standard'</code> at <code>month = '2026-01-01'</code>) who moved to <code>monthly_plan = 'premium'</code> by Apr 2026.</td></tr>
+    <tr><td><strong>Free-to-paid conversion rate</strong></td><td>Free users (<code>primary_plan_type = 'free'</code>) who have a <code>new_conversion = TRUE</code> order in <code>bi_reporting.orders</code> since Dec 2025.</td></tr>
+    <tr><td><strong>Paid conversion (new signups)</strong></td><td>Among connector users where <code>user_created_at IS NOT NULL</code>, the share with a <code>new_conversion = TRUE</code> order after signup.</td></tr>
+    <tr><td><strong>AI Multiplier</strong></td><td>Ratio of AI connector user adoption rate to platform WAU average for the same metric.</td></tr>
+  </tbody>
+</table>
+
+<h3>B. Formulas</h3>
+<table>
+  <thead><tr><th>Reported Metric</th><th>Formula</th></tr></thead>
+  <tbody>
+    <tr><td><strong>Segment creation rate</strong></td><td><code>COUNT(DISTINCT users with segment actions) / COUNT(DISTINCT cohort users) × 100</code></td></tr>
+    <tr><td><strong>Email send rate</strong></td><td><code>COUNT(DISTINCT users with delivered emails) / COUNT(DISTINCT cohort users) × 100</code></td></tr>
+    <tr><td><strong>Lift (×)</strong></td><td><code>Rate(Connector + Marketing Analyzer) / Rate(Connector alone)</code></td></tr>
+    <tr><td><strong>Account churn %</strong></td><td><code>COUNT(DISTINCT users in churn_details) / COUNT(DISTINCT cohort users) × 100</code></td></tr>
+    <tr><td><strong>Connector disconnect %</strong></td><td><code>COUNT(DISTINCT users with is_deleted = TRUE) / COUNT(DISTINCT cohort users) × 100</code></td></tr>
+    <tr><td><strong>Disconnect rate reduction</strong></td><td><code>(Non-segmenter disconnect - Segmenter disconnect) / Non-segmenter disconnect × 100</code><br/><code>= (1.5% − 0.9%) / 1.5% = 40%</code></td></tr>
+    <tr><td><strong>Upgrade rate</strong></td><td><code>COUNT(users whose plan changed Standard→Premium, Jan→Apr) / COUNT(Standard users in Jan) × 100</code></td></tr>
+    <tr><td><strong>Upgrade multiplier</strong></td><td><code>Upgrade rate(Active segmenters) / Upgrade rate(Non-segmenters)</code><br/><code>= 0.223% / 0.061% = 3.7×</code></td></tr>
+    <tr><td><strong>Free-to-paid conversion</strong></td><td><code>COUNT(free users with new_conversion = TRUE since Dec '25) / COUNT(free users in cohort) × 100</code></td></tr>
+    <tr><td><strong>WAU %</strong></td><td><code>COUNT(DISTINCT users with wau = TRUE for current week) / COUNT(DISTINCT cohort users) × 100</code></td></tr>
+    <tr><td><strong>AI feature engagement %</strong></td><td><code>COUNT(DISTINCT eligible users with wau = TRUE) / COUNT(DISTINCT eligible users) × 100</code></td></tr>
+    <tr><td><strong>Product attachment %</strong></td><td><code>COUNT(DISTINCT connector users in product table) / COUNT(DISTINCT all connector users) × 100</code></td></tr>
+    <tr><td><strong>Paid % (user composition)</strong></td><td><code>COUNT(DISTINCT users with primary_plan_type = 'monthly') / COUNT(DISTINCT connector users) × 100</code></td></tr>
+  </tbody>
+</table>
+
+<h3>C. Source Tables &amp; Fields</h3>
+<table>
+  <thead><tr><th>Table</th><th>Key Fields Used</th><th>Used For</th></tr></thead>
+  <tbody>
+    <tr><td><code>bi_reporting.integrations</code></td><td><code>user_id</code>, <code>name</code>, <code>type</code>, <code>created_at</code>, <code>user_created_at</code>, <code>is_deleted</code></td><td>Connector connections, new signups, daily adds, disconnect rates</td></tr>
+    <tr><td><code>bi_reporting.users</code></td><td><code>user_id</code>, <code>primary_plan_type</code></td><td>Plan tier distribution, paid %</td></tr>
+    <tr><td><code>bi_reporting.users_weekly_rollup</code></td><td><code>user_id</code>, <code>week</code>, <code>wau</code></td><td>Weekly Active Users, engagement %</td></tr>
+    <tr><td><code>bi_reporting_beta.monthly_genai_user_eligibility</code></td><td><code>user_id</code>, <code>month</code>, <code>monthly_plan</code>, <code>marketing_analyzer</code>, <code>email_inline</code></td><td>Marketing Analyzer eligibility, GenAI feature flags, plan tier</td></tr>
+    <tr><td><code>bi_reporting.tags_segments_daily_rollup</code></td><td><code>user_id</code>, <code>action_date</code>, <code>action_type</code>, <code>all_action_count</code></td><td>Segment creation rate, avg segment actions</td></tr>
+    <tr><td><code>bi_reporting.daily_email_send_stats</code></td><td><code>user_id</code>, <code>send_date</code>, <code>sends.delivered</code></td><td>Email send rate, avg emails delivered</td></tr>
+    <tr><td><code>bi_reporting.emails_customer_journey</code></td><td><code>user_id</code></td><td>Automation / Customer Journey adoption</td></tr>
+    <tr><td><code>bi_reporting.sms_daily_rollup</code></td><td><code>user_id</code>, <code>metrics.message.outbound.delivered_message_count</code></td><td>SMS adoption</td></tr>
+    <tr><td><code>bi_reporting.daily_transactional_sends</code></td><td><code>user_id</code>, <code>sent</code></td><td>Transactional email adoption</td></tr>
+    <tr><td><code>bi_reporting.orders</code></td><td><code>user_id</code>, <code>new_conversion</code>, <code>ordered_at</code></td><td>Free-to-paid conversion, paid signup conversion</td></tr>
+    <tr><td><code>bi_reporting.churn_details</code></td><td><code>user_id</code></td><td>Account churn rate</td></tr>
+    <tr><td><code>bi_reporting.messaging_outreach_daily_rollup</code></td><td><code>user_id</code>, <code>is_whatsapp_outreach</code></td><td>WhatsApp adoption (confirmed at 0%)</td></tr>
+  </tbody>
+</table>
+
+<h3>D. Cohort Definitions</h3>
+<table>
+  <thead><tr><th>Cohort</th><th>Definition</th></tr></thead>
+  <tbody>
+    <tr><td><strong>Connector + Marketing Analyzer</strong></td><td>Users in <code>integrations</code> with <code>type='oauth2'</code> AND <code>name IN ('chatgpt','claude')</code> who also have <code>marketing_analyzer = TRUE</code> in the eligibility view for Apr 2026. <strong>N = 2,479.</strong></td></tr>
+    <tr><td><strong>Connector alone</strong></td><td>Users in <code>integrations</code> with <code>type='oauth2'</code> AND <code>name IN ('chatgpt','claude')</code> who are NOT in the Marketing Analyzer eligible set. Predominantly free-tier users. <strong>N = 3,028.</strong></td></tr>
+    <tr><td><strong>Active segment creators</strong></td><td>Paid connector users who have at least one record in <code>tags_segments_daily_rollup</code> with <code>action_type LIKE '%segment%'</code> since Jan 2026. <strong>N = 1,634.</strong></td></tr>
+    <tr><td><strong>Non-segmenters</strong></td><td>Paid connector users with no segment activity since Jan 2026. <strong>N = 845.</strong></td></tr>
+    <tr><td><strong>Platform paid average</strong></td><td>All users in <code>bi_reporting.users</code> with <code>primary_plan_type = 'monthly'</code>. <strong>N = 996,204.</strong></td></tr>
+    <tr><td><strong>Free connector users</strong></td><td>Connector users with <code>primary_plan_type = 'free'</code> who are NOT Marketing Analyzer eligible. <strong>N = 2,180.</strong></td></tr>
+    <tr><td><strong>Free users with Marketing Analyzer</strong></td><td>Free-tier users in <code>bi_reporting.users</code> who also appear in the eligibility view with <code>marketing_analyzer = TRUE</code>. <strong>N = 25,159.</strong></td></tr>
+    <tr><td><strong>Active segmenters (upgrade analysis)</strong></td><td>Standard-plan users with <code>marketing_analyzer = TRUE</code> in Jan 2026 who had segment activity in Oct–Dec 2025. <strong>N = 146,790.</strong></td></tr>
+    <tr><td><strong>Non-segmenters (upgrade analysis)</strong></td><td>Standard-plan users with <code>marketing_analyzer = TRUE</code> in Jan 2026 with no segment activity in Oct–Dec 2025. <strong>N = 296,638.</strong></td></tr>
+  </tbody>
+</table>
+
 <div class="footer">
   <p>Data source: <code>mc-business-intelligence</code> BigQuery &nbsp;|&nbsp; Generated April 11, 2026 &nbsp;|&nbsp; QBO benchmark data provided by QuickBooks product team</p>
 </div>
