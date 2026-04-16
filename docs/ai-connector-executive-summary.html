@@ -31,80 +31,104 @@
 <body>
 
 <h1>MC Everywhere Analyzer — Weekly Report</h1>
-<p class="subtitle">Mailchimp vs QuickBooks &amp; ChatGPT vs Claude &nbsp;|&nbsp; April 11, 2026</p>
+<p class="subtitle">Mailchimp ChatGPT &amp; Claude Connector Performance &nbsp;|&nbsp; Data through April 15, 2026</p>
 
-<!-- ════════ PART 1: CHANNEL PERFORMANCE ════════ -->
+<div class="callout">
+<strong>Claude overtook ChatGPT this week.</strong> With 4,013 total connections in just 15 days, Claude has surpassed ChatGPT's 2,944 accumulated over 135 days. Claude is adding ~277/day while ChatGPT has declined to ~10/day.
+</div>
 
-<h2>Scale &amp; Growth Velocity</h2>
+<!-- ════════ SCALE ════════ -->
+<h2>Scale &amp; Growth</h2>
 <table>
-<thead><tr><th></th><th>QBO ChatGPT</th><th>QBO Claude</th><th>MC ChatGPT</th><th>MC Claude</th></tr></thead>
+<thead><tr><th></th><th>ChatGPT</th><th>Claude</th><th>Combined</th></tr></thead>
 <tbody>
-<tr><td><strong>Total connections</strong></td><td class="num">4,792</td><td class="num">4,830</td><td class="num">2,899</td><td class="num">2,693</td></tr>
-<tr><td><strong>Days since launch</strong></td><td class="num">~130</td><td class="num">13</td><td class="num">130</td><td class="num">10</td></tr>
-<tr><td><strong>Daily adds (7d avg)</strong></td><td class="num">~60 (steady)</td><td class="num">280–440</td><td class="num loser">~13 (declining)</td><td class="num">~247</td></tr>
+<tr><td><strong>Total connections</strong></td><td class="num">2,944</td><td class="num winner">4,013</td><td class="num">6,957</td></tr>
+<tr><td><strong>Active</strong></td><td class="num">2,916</td><td class="num winner">3,994</td><td class="num">6,910</td></tr>
+<tr><td><strong>Disconnected</strong></td><td class="num">28 (1.0%)</td><td class="num winner">19 (0.5%)</td><td class="num">47 (0.7%)</td></tr>
+<tr><td><strong>Days since launch</strong></td><td class="num">135</td><td class="num">15</td><td class="num">—</td></tr>
+<tr><td><strong>Daily adds (7d avg)</strong></td><td class="num loser">~10</td><td class="num winner">~277</td><td class="num">~287</td></tr>
+<tr><td><strong>New MC signups</strong></td><td class="num">281 (9.5%)</td><td class="num">163 (4.1%)</td><td class="num">444</td></tr>
 </tbody>
 </table>
-<p>Mailchimp is at roughly <strong>half of QBO's scale</strong>. Claude is the growth story — <strong>247/day</strong> and will overtake ChatGPT's cumulative total within days. ChatGPT has decayed to <strong>13/day</strong>, down from 45/day in January.</p>
+<p>Claude peaked at <strong>354 connections on April 14</strong>. ChatGPT hit a low of <strong>6 on April 12</strong> and continues to decay. The combined connector base reached <strong>6,957 users</strong>.</p>
 
+<!-- ════════ COMPOSITION ════════ -->
 <h2>User Composition</h2>
-<p>Over <strong>90%</strong> of connections are existing Mailchimp accounts. Claude skews more toward paid plans (<strong>63.4%</strong>) than ChatGPT (<strong>52.6%</strong>) — far above any other integration channel.</p>
-
-<h2>Engagement: Mailchimp Leads QBO</h2>
 <table>
-<thead><tr><th></th><th>QBO ChatGPT</th><th>QBO Claude</th><th>MC ChatGPT</th><th>MC Claude</th></tr></thead>
+<thead><tr><th>Plan</th><th>ChatGPT</th><th>%</th><th>Claude</th><th>%</th></tr></thead>
 <tbody>
-<tr><td><strong>AI feature engagement (eligible)</strong></td><td class="num">53%</td><td class="num">49%</td><td class="num winner">62.8%</td><td class="num winner">82.0%</td></tr>
-<tr><td><strong>Premium / Advanced tier</strong></td><td class="num">73%</td><td class="num">68%</td><td class="num winner">87.5%</td><td class="num winner">96.0%</td></tr>
+<tr><td><strong>Free</strong></td><td class="num">1,763</td><td class="num">59.9%</td><td class="num">1,962</td><td class="num">48.9%</td></tr>
+<tr><td><strong>Standard</strong></td><td class="num">913</td><td class="num">31.0%</td><td class="num winner">1,643</td><td class="num">40.9%</td></tr>
+<tr><td><strong>Legacy</strong></td><td class="num">196</td><td class="num">6.7%</td><td class="num">325</td><td class="num">8.1%</td></tr>
+<tr><td><strong>Premium</strong></td><td class="num">72</td><td class="num">2.4%</td><td class="num">83</td><td class="num">2.1%</td></tr>
+<tr><td><strong>Total paid</strong></td><td class="num">1,181</td><td class="num">40.1%</td><td class="num winner">2,051</td><td class="num winner">51.1%</td></tr>
+</tbody>
+</table>
+<p>Claude has <strong>2,051 paid users — nearly 2x ChatGPT's 1,181</strong>. Over 90% of connections on both channels are existing Mailchimp accounts, not new customers.</p>
+
+<!-- ════════ ENGAGEMENT ════════ -->
+<h2>Engagement</h2>
+<table>
+<thead><tr><th></th><th>ChatGPT</th><th>Claude</th></tr></thead>
+<tbody>
+<tr><td><strong>GenAI-eligible users</strong></td><td class="num">1,004</td><td class="num winner">1,561</td></tr>
+<tr><td><strong>GenAI engagement rate</strong></td><td class="num">52.1%</td><td class="num winner">66.2%</td></tr>
 </tbody>
 </table>
 
+<h3>Engagement by Plan Tier</h3>
+<table>
+<thead><tr><th>Plan</th><th colspan="4">ChatGPT</th><th colspan="4">Claude</th></tr>
+<tr><th></th><th>WAU</th><th>Segments</th><th>Automations</th><th>SMS</th><th>WAU</th><th>Segments</th><th>Automations</th><th>SMS</th></tr></thead>
+<tbody>
+<tr><td><strong>Premium</strong></td><td class="num winner">90.3%</td><td class="num winner">91.7%</td><td class="num">84.7%</td><td class="num winner">34.7%</td><td class="num winner">90.4%</td><td class="num winner">95.2%</td><td class="num winner">88.0%</td><td class="num">16.9%</td></tr>
+<tr><td><strong>Standard</strong></td><td class="num">47.9%</td><td class="num">68.8%</td><td class="num">64.4%</td><td class="num">14.5%</td><td class="num winner">63.7%</td><td class="num">64.6%</td><td class="num">62.1%</td><td class="num">7.5%</td></tr>
+<tr><td><strong>Legacy</strong></td><td class="num">68.4%</td><td class="num">74.0%</td><td class="num">60.7%</td><td class="num">9.2%</td><td class="num winner">80.0%</td><td class="num">75.7%</td><td class="num">61.2%</td><td class="num">7.1%</td></tr>
+<tr><td><strong>Free</strong></td><td class="num">15.1%</td><td class="num">23.6%</td><td class="num">23.5%</td><td class="num">3.2%</td><td class="num winner">39.9%</td><td class="num">31.1%</td><td class="num">26.5%</td><td class="num">1.8%</td></tr>
+</tbody>
+</table>
+<p>Premium users are near-saturation on both channels (~90% WAU, ~92-95% segments). Claude leads ChatGPT on WAU at every tier — most notably Standard (63.7% vs 47.9%) and Free (39.9% vs 15.1%).</p>
+
+<!-- ════════ PRODUCT ATTACHMENT ════════ -->
 <h2>Product Attachment</h2>
 <table>
-<thead><tr><th>MC Product</th><th>MC ChatGPT</th><th>MC Claude</th><th>MC Platform Avg</th><th>QBO Equivalent</th></tr></thead>
+<thead><tr><th>MC Product</th><th>ChatGPT</th><th>Claude</th><th>MC Platform Avg</th><th>AI Multiplier</th></tr></thead>
 <tbody>
-<tr><td><strong>Automations</strong></td><td class="num winner">40%</td><td class="num winner">46%</td><td class="num">23%</td><td>Payments: 29%/27%</td></tr>
-<tr><td><strong>SMS</strong></td><td class="num winner">8%</td><td class="num winner">5%</td><td class="num">1.9%</td><td>Payroll: 19%/17%</td></tr>
-<tr><td><strong>Transactional Email</strong></td><td class="num">1.5%</td><td class="num">2.0%</td><td class="num">2.1%</td><td>BillPay: 18%/16%</td></tr>
+<tr><td><strong>Automations</strong></td><td class="num winner">40.1%</td><td class="num winner">45.1%</td><td class="num">23.5%</td><td class="num">1.7–1.9x</td></tr>
+<tr><td><strong>SMS</strong></td><td class="num winner">7.8%</td><td class="num winner">4.9%</td><td class="num">1.9%</td><td class="num">2.6–4.1x</td></tr>
+<tr><td><strong>Transactional Email</strong></td><td class="num">1.2%</td><td class="num">1.8%</td><td class="num">—</td><td class="num">—</td></tr>
 </tbody>
 </table>
+<p>Automations remains the strongest product attachment — <strong>45.1% for Claude, 40.1% for ChatGPT</strong>, both nearly 2x the platform average of 23.5%. SMS adoption for ChatGPT users (7.8%) is 4.1x the platform rate.</p>
 
+<!-- ════════ ACQUISITION ════════ -->
 <h2>New Customer Acquisition <span class="tag tag-red">Critical Gap</span></h2>
 <table>
-<thead><tr><th>Channel</th><th>New MC Signups</th><th>Paid Conversion</th><th>Best Traditional</th></tr></thead>
+<thead><tr><th>Channel</th><th>New MC Signups</th><th>Paid Conversion</th></tr></thead>
 <tbody>
-<tr><td><strong>ChatGPT</strong></td><td class="num">278 (130 days)</td><td class="num loser">0%</td><td class="num">Shopify: 20.7%</td></tr>
-<tr><td><strong>Claude</strong></td><td class="num">103 (10 days)</td><td class="num loser">1.9%</td><td class="num">Shopify: 20.7%</td></tr>
+<tr><td><strong>ChatGPT</strong></td><td class="num">281 (over 135 days)</td><td class="num loser">0%</td></tr>
+<tr><td><strong>Claude</strong></td><td class="num">163 (over 15 days)</td><td class="num loser">1.2% (2 users)</td></tr>
 </tbody>
 </table>
+<p>ChatGPT has generated 281 new Mailchimp accounts over 135 days — <strong>none have converted to paid</strong>. Claude has 163 signups in 15 days with 2 conversions. Both remain the lowest-converting acquisition channels in Mailchimp's portfolio.</p>
 
-<h2>Scorecard</h2>
-<table>
-<thead><tr><th>Dimension</th><th>QBO vs MC</th><th>ChatGPT vs Claude</th></tr></thead>
-<tbody>
-<tr><td><strong>Scale</strong></td><td><span class="tag tag-red">QBO leads ~2x</span></td><td>Claude closing fast</td></tr>
-<tr><td><strong>Growth velocity</strong></td><td><span class="tag tag-red">QBO leads</span></td><td><span class="tag tag-green">Claude 247/day vs 13/day</span></td></tr>
-<tr><td><strong>Engagement</strong></td><td><span class="tag tag-green">MC leads +10-33 pts</span></td><td><span class="tag tag-green">Claude 82% vs 63%</span></td></tr>
-<tr><td><strong>Top attachment</strong></td><td><span class="tag tag-green">MC leads</span></td><td><span class="tag tag-green">Claude 46% vs 40%</span></td></tr>
-<tr><td><strong>Multi-product depth</strong></td><td><span class="tag tag-red">QBO leads 3-8x</span></td><td><span class="tag tag-amber">ChatGPT slightly on SMS</span></td></tr>
-<tr><td><strong>New customer conversion</strong></td><td><span class="tag tag-red">QBO leads</span></td><td><span class="tag tag-red">Neither works (0-1.9%)</span></td></tr>
-</tbody>
-</table>
-
-<!-- ════════ PART 2: MARKETING ANALYZER BUSINESS CASE ════════ -->
+<!-- ════════ MARKETING ANALYZER ════════ -->
 <hr class="divider"/>
 
 <h2>How the Marketing Analyzer Accelerates Connector Performance</h2>
+<p>The Marketing Analyzer currently lives only inside the Mailchimp app. Connector users with access to it dramatically outperform those without.</p>
 
 <h3>1. Closes the Gap on Email Sends &amp; Segment Creation</h3>
 <table>
-<thead><tr><th>Metric</th><th>Connector + Marketing Analyzer</th><th>Connector Alone</th><th>Lift</th></tr></thead>
+<thead><tr><th>Metric</th><th>Connector + Marketing Analyzer<br/><small>(3,166 users)</small></th><th>Connector Alone<br/><small>(3,680 users)</small></th><th>Lift</th></tr></thead>
 <tbody>
-<tr><td><strong>Segment creation rate</strong></td><td class="num winner">68.3%</td><td class="num">26.7%</td><td class="num winner">2.6x</td></tr>
-<tr><td><strong>Email send rate</strong></td><td class="num winner">88.7%</td><td class="num">44.8%</td><td class="num winner">2.0x</td></tr>
-<tr><td><strong>Avg segment actions/user</strong></td><td class="num winner">76</td><td class="num">23</td><td class="num winner">3.3x</td></tr>
-<tr><td><strong>Avg emails delivered/user</strong></td><td class="num winner">330,935</td><td class="num">104,656</td><td class="num winner">3.2x</td></tr>
+<tr><td><strong>Segment creation rate</strong></td><td class="num winner">68.8%</td><td class="num">27.3%</td><td class="num winner">2.5x</td></tr>
+<tr><td><strong>Email send rate</strong></td><td class="num winner">88.5%</td><td class="num">46.0%</td><td class="num winner">1.9x</td></tr>
+<tr><td><strong>Avg segment actions/user</strong></td><td class="num winner">78</td><td class="num">22</td><td class="num winner">3.5x</td></tr>
+<tr><td><strong>Avg emails delivered/user</strong></td><td class="num winner">328,194</td><td class="num">90,915</td><td class="num winner">3.6x</td></tr>
 </tbody>
 </table>
+<p>Connector users with the Marketing Analyzer create segments at <strong>2.5x the rate</strong>, send emails at <strong>1.9x the rate</strong>, and deliver <strong>3.6x more emails per user</strong>.</p>
 
 <h3>2. Drives Plan Upgrades &amp; Free-to-Paid Conversion</h3>
 <table>
@@ -122,66 +146,52 @@
 <tr><td>Platform (no connector, no analyzer)</td><td class="num">46.7M</td><td class="num">101,218</td><td class="num">0.2%</td></tr>
 </tbody>
 </table>
+<p>Active segmenters upgrade Standard to Premium at <strong>3.7x the rate</strong>. Free users with analyzer access convert to paid at <strong>99.4%</strong> vs 12% for free connector users without it.</p>
 
-<!-- ════════ PART 3: ADVANCED ANALYSIS ════════ -->
+<!-- ════════ STACKING ════════ -->
 <hr class="divider"/>
-
-<h2>Cohort Analysis by Plan Tier</h2>
-<table>
-<thead><tr><th>Plan</th><th colspan="5">ChatGPT</th><th colspan="5">Claude</th></tr>
-<tr><th></th><th>Users</th><th>WAU</th><th>Segments</th><th>Automations</th><th>SMS</th><th>Users</th><th>WAU</th><th>Segments</th><th>Automations</th><th>SMS</th></tr></thead>
-<tbody>
-<tr><td><strong>Premium</strong></td><td class="num">72</td><td class="num winner">87.5%</td><td class="num winner">90.3%</td><td class="num winner">86.1%</td><td class="num winner">33.3%</td><td class="num">50</td><td class="num winner">96.0%</td><td class="num winner">96.0%</td><td class="num winner">94.0%</td><td class="num">16.0%</td></tr>
-<tr><td><strong>Standard</strong></td><td class="num">893</td><td class="num">59.5%</td><td class="num">68.1%</td><td class="num">64.2%</td><td class="num">14.2%</td><td class="num">1,101</td><td class="num">81.3%</td><td class="num">63.8%</td><td class="num">62.9%</td><td class="num">7.6%</td></tr>
-<tr><td><strong>Legacy</strong></td><td class="num">191</td><td class="num">76.4%</td><td class="num">73.8%</td><td class="num">61.8%</td><td class="num">9.4%</td><td class="num">220</td><td class="num">84.1%</td><td class="num">75.9%</td><td class="num">61.4%</td><td class="num">6.8%</td></tr>
-<tr><td><strong>Free</strong></td><td class="num">1,743</td><td class="num">23.1%</td><td class="num">23.5%</td><td class="num">23.8%</td><td class="num">3.4%</td><td class="num">1,322</td><td class="num">61.0%</td><td class="num">31.3%</td><td class="num">27.2%</td><td class="num">2.0%</td></tr>
-</tbody>
-</table>
-<p>Claude Premium users are at near-saturation (<strong>96% WAU, 96% segments, 94% automations</strong>). The biggest growth opportunity is Claude Standard (81% WAU but only 64% segments) and the 3,065 free-tier users across both channels.</p>
-
-<h2>Top Industries Among Connector Users</h2>
-<table>
-<thead><tr><th>Industry</th><th>ChatGPT</th><th>Claude</th></tr></thead>
-<tbody>
-<tr><td><strong>Non-profit</strong></td><td class="num">81</td><td class="num">65</td></tr>
-<tr><td><strong>Real estate</strong></td><td class="num">63</td><td class="num">57</td></tr>
-<tr><td><strong>Health &amp; fitness</strong></td><td class="num">34</td><td class="num">53</td></tr>
-<tr><td><strong>Education &amp; training</strong></td><td class="num">32</td><td class="num">43</td></tr>
-<tr><td><strong>Retail</strong></td><td class="num">38</td><td class="num">34</td></tr>
-<tr><td><strong>E-commerce</strong></td><td class="num">36</td><td class="num">29</td></tr>
-<tr><td><strong>Software &amp; web app</strong></td><td class="num">—</td><td class="num">44</td></tr>
-<tr><td><strong>Consulting</strong></td><td class="num">23</td><td class="num">42</td></tr>
-<tr><td><strong>Travel &amp; transportation</strong></td><td class="num">31</td><td class="num">39</td></tr>
-</tbody>
-</table>
-<p><strong>Non-profit</strong> is the top industry on both channels. Claude skews more toward <strong>software, consulting, and health</strong> — knowledge-worker segments. ~70% of users have no industry set.</p>
 
 <h2>Multi-Product Stacking Effect</h2>
 <table>
-<thead><tr><th>Products Used</th><th>Users</th><th>WAU %</th><th>Incremental vs 0 Products</th></tr></thead>
+<thead><tr><th>Products Used</th><th>Users</th><th>WAU %</th><th>Incremental vs 0</th></tr></thead>
 <tbody>
-<tr><td><strong>0 products</strong></td><td class="num">1,589</td><td class="num">23.0%</td><td class="num">—</td></tr>
-<tr><td><strong>1 product</strong></td><td class="num">945</td><td class="num">46.0%</td><td class="num winner">+23.0 pts</td></tr>
-<tr><td><strong>2 products</strong></td><td class="num">1,350</td><td class="num">65.3%</td><td class="num winner">+42.3 pts</td></tr>
-<tr><td><strong>3 products</strong></td><td class="num">1,383</td><td class="num">81.6%</td><td class="num winner">+58.6 pts</td></tr>
-<tr><td><strong>4 products</strong></td><td class="num">240</td><td class="num winner">85.4%</td><td class="num winner">+62.4 pts</td></tr>
+<tr><td><strong>0 products</strong></td><td class="num">1,917</td><td class="num">13.2%</td><td class="num">—</td></tr>
+<tr><td><strong>1 product</strong></td><td class="num">1,170</td><td class="num">32.5%</td><td class="num winner">+19.3 pts</td></tr>
+<tr><td><strong>2 products</strong></td><td class="num">1,717</td><td class="num">52.6%</td><td class="num winner">+39.4 pts</td></tr>
+<tr><td><strong>3 products</strong></td><td class="num">1,759</td><td class="num">71.2%</td><td class="num winner">+58.0 pts</td></tr>
+<tr><td><strong>4 products</strong></td><td class="num">283</td><td class="num winner">76.0%</td><td class="num winner">+62.8 pts</td></tr>
 </tbody>
 </table>
-<p>Each additional product doubles then compounds WAU: <strong>23% → 46% → 65% → 82% → 85%</strong>. Users with 3+ products (segments + automations + email sends) are 3.5x more likely to be weekly active than those with none.</p>
+<p>Each additional product compounds WAU: <strong>13% → 33% → 53% → 71% → 76%</strong>. Users with 3+ products are <strong>5.4x more likely</strong> to be weekly active than those with none. The Marketing Analyzer is the fastest path to adding segmentation as the next product for the 1,917 users currently at zero.</p>
 
 <!-- ════════ STRATEGIC IMPLICATION ════════ -->
 <hr class="divider"/>
 
 <h2>Strategic Implication</h2>
 <div class="callout">
-The ChatGPT and Claude connectors have built Mailchimp's most engaged user base. The Marketing Analyzer is the accelerant that compounds these strengths and closes the remaining gaps.
+Claude has overtaken ChatGPT and is now Mailchimp's fastest-growing connector channel. The combined base of 6,957 users is highly engaged, with strong automation and SMS adoption. The Marketing Analyzer is the accelerant that closes the remaining email/segment gap and fixes the critical paid-conversion problem.
 </div>
-<p>Embedding the Marketing Analyzer in the connector experience would: (1) <strong>close the email and segment gap</strong> with a demonstrated 2-3x lift, (2) <strong>deepen retention</strong> by driving segment-creation behavior that reduces disconnect rates by 40%, and (3) <strong>accelerate upgrades</strong> — segmenters upgrade Standard to Premium at 3.7x, and free users with analyzer access convert at 99% vs 12% without.</p>
-<p>The multi-product stacking data reinforces this: each product a connector user adopts adds <strong>~20 pts of WAU</strong>. The Marketing Analyzer is the fastest path to adding the next product (segmentation) for the 1,589 users currently at zero products.</p>
-<p>Claude is the stronger channel on every forward-looking metric. <strong>Prioritize embedding the Marketing Analyzer in Claude first.</strong></p>
+<p>Embedding the Marketing Analyzer in the connector experience would: (1) <strong>close the email and segment gap</strong> with a demonstrated 2.5-3.6x lift across 3,680 users who currently lack it, (2) <strong>accelerate upgrades</strong> — segmenters upgrade Standard to Premium at 3.7x, and free users with analyzer access convert at 99% vs 12% without, and (3) <strong>compound the multi-product stacking effect</strong> — each product adds ~20 pts of WAU, and the analyzer is the fastest way to get 1,917 zero-product users to their first product.</p>
+<p><strong>Prioritize embedding the Marketing Analyzer in Claude first</strong> — it has the larger user base (4,013), higher paid mix (51%), and stronger engagement at every tier.</p>
+
+<!-- ════════ DATA QUALITY ════════ -->
+<hr class="divider"/>
+
+<h2>Data Quality</h2>
+<table>
+<thead><tr><th>Check</th><th>Status</th></tr></thead>
+<tbody>
+<tr><td>ChatGPT plan sum = total (1,763+913+196+72 = 2,944)</td><td class="winner">PASS</td></tr>
+<tr><td>Claude plan sum = total (1,962+1,643+325+83 = 4,013)</td><td class="winner">PASS</td></tr>
+<tr><td>Analyzer partition = total connectors (3,166+3,680 = 6,846)</td><td class="winner">PASS</td></tr>
+<tr><td>Active + disconnected = total for both channels</td><td class="winner">PASS</td></tr>
+<tr><td>Combined channels (2,944+4,013 = 6,957)</td><td class="winner">PASS</td></tr>
+<tr><td>Data freshness: last connection Apr 15, 2026 20:57 UTC</td><td class="winner">PASS</td></tr>
+</tbody>
+</table>
 
 <div class="footer">
-<p>MC Everywhere Analyzer Agent &nbsp;|&nbsp; Data source: <code>mc-business-intelligence</code> BigQuery &nbsp;|&nbsp; Generated April 11, 2026</p>
+<p>MC Everywhere Analyzer Agent &nbsp;|&nbsp; Data source: <code>mc-business-intelligence</code> BigQuery &nbsp;|&nbsp; Generated April 15, 2026 &nbsp;|&nbsp; All integrity checks passed</p>
 </div>
 </body>
 </html>
